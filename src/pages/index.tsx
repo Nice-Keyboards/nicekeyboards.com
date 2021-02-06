@@ -64,7 +64,7 @@ const IndexPage = ({ data }) => (
               w="100%"
               ml="1rem"
             >
-              <Img fadeIn={false} loading="eager" fluid={data.nicenano.childImageSharp.fluid} imgStyle={{ objectFit: 'contain', maxHeight: '50vh' }} draggable={false} />
+              <Img durationFadeIn={250} loading="eager" fluid={data.nicenano.childImageSharp.fluid} imgStyle={{ objectFit: 'contain', maxHeight: '50vh' }} draggable={false} />
             </Box>
             <Box textAlign="center" pt="2rem">
               <chakra.h1
@@ -133,7 +133,7 @@ const IndexPage = ({ data }) => (
               w="100%"
               minW="450px"
             >
-              <Img fadeIn={false} loading="eager" fluid={data.nice60.childImageSharp.fluid} draggable={false} />
+              <Img durationFadeIn={250} loading="eager" fluid={data.nice60.childImageSharp.fluid} draggable={false} />
             </Box>
             <Box textAlign="center">
               <chakra.h1
