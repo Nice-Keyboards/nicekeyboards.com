@@ -11,6 +11,7 @@ const aboutPage = () => {
           name="description"
           content="Learn more about Nice Keyboards and find out how to get in contact."
         />
+        <html lang="en" />
       </Helmet>
     </Layout>
   );

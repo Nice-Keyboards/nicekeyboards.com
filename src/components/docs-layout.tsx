@@ -135,6 +135,7 @@ const DocsLayout = ({children }) => {
                       name="description"
                       content={currentPage.description}
                     />
+                    <html lang="en" />
                   </Helmet>
                   <Box as="section" pt={{ base: "5rem", md: "6rem" }} pb="5rem">
                     <Container maxW="1280px">

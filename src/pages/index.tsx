@@ -49,11 +49,12 @@ const IndexPage = ({ data }) => (
     <Helmet>
       <title>Nice Keyboards</title>
       <meta name="description" content="Cutting edge wireless mechanical keyboard solutions" />
+      <html lang="en" />
     </Helmet>
     <Box mb={20}>
       <Box as="section" pt={{ base: "8rem", md: "10rem" }} pb="5rem" backgroundImage={`url('/nicenanobg-${useColorModeValue('light', 'dark')}.svg')`} backgroundSize="cover" backgroundPosition="center">
         <Container maxW="1280px" my="2rem">
-          <Wrap justify="center">
+          <Flex justify="center" wrap="wrap">
             <Box
               css={css`
                 animation: ${float} 5s ease-in-out infinite alternate;
@@ -106,13 +107,14 @@ const IndexPage = ({ data }) => (
                   size="lg"
                   colorScheme="cyan"
                   mt="10"
+                  as="div"
                   rightIcon={<FontAwesomeIcon icon={faArrowRight} />}
                 >
                   Learn More
                 </Button>
               </Link>
             </Box>
-          </Wrap>
+          </Flex>
         </Container>
       </Box>
       <Box
@@ -177,7 +179,7 @@ const IndexPage = ({ data }) => (
                 and underglow with unbelievable battery life.
               </Text>
 
-              <Link to="/nice-nano">
+              <Link to="/nice-60">
                 <Button
                   h="4rem"
                   px="2rem"
@@ -186,6 +188,7 @@ const IndexPage = ({ data }) => (
                   size="lg"
                   colorScheme="cyan"
                   mt="10"
+                  as="div"
                   rightIcon={<FontAwesomeIcon icon={faArrowRight} />}
                 >
                   Learn More
