@@ -1,13 +1,15 @@
 module.exports = {
   siteMetadata: {
     title: "Nice Keyboards",
+    siteUrl: "https://www.nicekeyboards.com",
+    description: "Cutting edge wireless mechanical keyboard solutions",
   },
   plugins: [
     "gatsby-plugin-emotion",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: "G-WEV7JRSTJ5",
+        trackingIds: ["G-WEV7JRSTJ5"],
       },
     },
     "gatsby-plugin-sharp",
@@ -20,7 +22,48 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/docs-layout.tsx"),
+        },
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 650,
+              backgroundColor: "transparent",
+              disableBgImageOnAlpha: true,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`,
+            options: {
+              background: "rgba(26, 32, 44, 0.5)",
+            },
+          },
+        ],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 650,
+              backgroundColor: "transparent",
+              disableBgImageOnAlpha: true,
+              linkImagesToOriginal: false,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`,
+            options: {
+              background: "rgba(26, 32, 44, 0.5)",
+            },
+          },
+        ],
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
@@ -38,5 +81,7 @@ module.exports = {
       },
       __key: "pages",
     },
+    "@chakra-ui/gatsby-plugin",
+    "gatsby-plugin-netlify",
   ],
 };
