@@ -1,12 +1,14 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import { Helmet } from "react-helmet";
 
-// markup
 const NotFoundPage = () => {
   return (
     <Layout>
-      <title>Not found</title>
+      <Helmet>
+        <title>Not found</title>
+      </Helmet>
       <Box as="section" pt={{ base: "8rem", md: "10rem" }} pb="5rem">
         <Container
           maxW="1280px"

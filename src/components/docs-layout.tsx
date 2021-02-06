@@ -20,7 +20,10 @@ interface NavNode {
 }
 
 const NavItem = ({location,  title, description, slug, children }) => {
-  const activePage = location.pathname === '/' + slug || location.pathname + '/' === '/' + slug;
+  const activePage =
+    location.pathname === "/" + slug ||
+    location.pathname + "/" === "/" + slug ||
+    location.pathname === "/" + slug + "/";
   
   return (
     <>
@@ -111,7 +114,8 @@ const DocsLayout = ({children }) => {
 
               const activePage =
                 location.pathname === "/" + page.node.slug ||
-                location.pathname + "/" === "/" + page.node.slug;
+                location.pathname + "/" === "/" + page.node.slug ||
+                location.pathname === "/" + page.node.slug + "/";
 
               if (activePage) {
                 currentPage = currentDir;
@@ -146,7 +150,7 @@ const DocsLayout = ({children }) => {
                           )}
                         >
                           <Input
-                            placeHolder="Search"
+                            placeholder="Search"
                             variant="filled"
                             focusBorderColor="cyan.400"
                             colorScheme="cyan"

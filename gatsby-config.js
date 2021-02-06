@@ -61,6 +61,12 @@ module.exports = {
               background: "rgba(26, 32, 44, 0.5)",
             },
           },
+          {
+            resolve: "gatsby-remark-autolink-headers",
+            options: {
+              icon: false,
+            },
+          },
         ],
       },
     },

@@ -74,7 +74,12 @@ function HeaderContent() {
           <NavItem to="/about">About</NavItem>
         </Flex>
         <Flex justify="flex-end" align="center" color="gray.400">
-          <ChakraLink href="https://discord.gg/CHd6hUy" target="_blank">
+          <ChakraLink
+            href="https://discord.gg/CHd6hUy"
+            rel="noopener"
+            rel="noreferrer"
+            target="_blank"
+          >
             <IconButton
               size="md"
               fontSize="lg"
