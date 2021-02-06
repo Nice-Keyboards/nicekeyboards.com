@@ -14,7 +14,7 @@ import {
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/pro-solid-svg-icons";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import { jsx, css, keyframes } from "@emotion/react";
 import Layout from "../components/layout";
@@ -97,18 +97,20 @@ const IndexPage = ({ data }) => (
                 The nice!nano is a Pro Micro drop-in replacement board that
                 makes building wireless keyboards a breeze.
               </Text>
-              <Button
-                h="4rem"
-                px="2rem"
-                fontSize="1.2rem"
-                as="a"
-                size="lg"
-                colorScheme="cyan"
-                mt="10"
-                rightIcon={<FontAwesomeIcon icon={faArrowRight} />}
-              >
-                Learn More
-              </Button>
+              <Link to="/nice-nano">
+                <Button
+                  h="4rem"
+                  px="2rem"
+                  fontSize="1.2rem"
+                  as="a"
+                  size="lg"
+                  colorScheme="cyan"
+                  mt="10"
+                  rightIcon={<FontAwesomeIcon icon={faArrowRight} />}
+                >
+                  Learn More
+                </Button>
+              </Link>
             </Box>
           </Wrap>
         </Container>
@@ -175,18 +177,20 @@ const IndexPage = ({ data }) => (
                 and underglow with unbelievable battery life.
               </Text>
 
-              <Button
-                h="4rem"
-                px="2rem"
-                fontSize="1.2rem"
-                as="a"
-                size="lg"
-                colorScheme="cyan"
-                mt="10"
-                rightIcon={<FontAwesomeIcon icon={faArrowRight} />}
-              >
-                Learn More
-              </Button>
+              <Link to="/nice-nano">
+                <Button
+                  h="4rem"
+                  px="2rem"
+                  fontSize="1.2rem"
+                  as="a"
+                  size="lg"
+                  colorScheme="cyan"
+                  mt="10"
+                  rightIcon={<FontAwesomeIcon icon={faArrowRight} />}
+                >
+                  Learn More
+                </Button>
+              </Link>
               <Text
                 maxW="560px"
                 mx="auto"
