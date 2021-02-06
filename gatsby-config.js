@@ -19,6 +19,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: "Nice Keyboards",
+        short_name: "Nice Keyboards",
+        start_url: "/",
+        background_color: "#1A202C",
+        theme_color: "#0BC5EA",
+        display: "browser",
         icon: "src/images/icon.png",
       },
     },
