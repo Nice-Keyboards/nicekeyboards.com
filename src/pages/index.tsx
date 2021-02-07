@@ -15,7 +15,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/pro-solid-svg-icons";
 import { graphql, Link } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import { jsx, css, keyframes } from "@emotion/react";
 import Layout from "../components/layout";
 import theme from '../@chakra-ui/gatsby-plugin/theme';
@@ -65,7 +65,17 @@ const IndexPage = ({ data }) => (
               w="100%"
               ml="1rem"
             >
-              <Img durationFadeIn={250} loading="eager" fluid={data.nicenano.childImageSharp.fluid} imgStyle={{ objectFit: 'contain', maxHeight: '50vh' }} draggable={false} />
+              <StaticImage
+                src="../images/nicenano.png"
+                alt="nice!nano"
+                height={400}
+                placeholder="none"
+                imgStyle={{ objectFit: 'contain', maxHeight: '50vh' }}
+                loading="eager"
+                draggable={false} 
+                formats={['auto', 'webp', 'avif']}
+                quality={80}
+              />
             </Box>
             <Box textAlign="center" pt="2rem">
               <chakra.h1
@@ -137,7 +147,16 @@ const IndexPage = ({ data }) => (
               w="100%"
               minW="450px"
             >
-              <Img durationFadeIn={250} loading="eager" fluid={data.nice60.childImageSharp.fluid} draggable={false} />
+              <StaticImage
+                src="../images/nice60home.png"
+                alt="nice!60"
+                width={900}
+                placeholder="none"
+                loading="eager"
+                draggable={false} 
+                formats={['auto', 'webp', 'avif']}
+                quality={80}
+              />
             </Box>
             <Box textAlign="center">
               <chakra.h1
@@ -212,23 +231,18 @@ const IndexPage = ({ data }) => (
   </Layout>
 );
 
-export const query = graphql`
-  query {
-    nicenano: file(relativePath: { eq: "nicenano.png" }) {
-      childImageSharp {
-        fluid(maxHeight: 400, quality: 80) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    nice60: file(relativePath: { eq: "nice60home.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 900, quality: 80) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
+export const query = graphql`{
+  nicenano: file(relativePath: {eq: "nicenano.png"}) {
+    childImageSharp {
+      gatsbyImageData(height: 400, quality: 80, placeholder: NONE, layout: CONSTRAINED)
     }
   }
+  nice60: file(relativePath: {eq: "nice60home.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 900, quality: 80, placeholder: NONE, layout: CONSTRAINED)
+    }
+  }
+}
 `;
 
 export default IndexPage;

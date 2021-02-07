@@ -158,12 +158,19 @@ const DocsLayout = ({children }) => {
                             size="md"
                             mb="1rem"
                           />
-                          {Object.keys(nav.children.docs.children).map((p) => (
-                            <NavItem
-                              location={location}
-                              {...nav.children.docs.children[p]}
-                            />
-                          ))}
+                          {Object.keys(nav.children.docs.children)
+                            .sort(
+                              (a, b) =>
+                                nav.children.docs.children[a].order -
+                                nav.children.docs.children[b].order
+                            )
+                            .map((p) => (
+                              <NavItem
+                                key={p}
+                                location={location}
+                                {...nav.children.docs.children[p]}
+                              />
+                            ))}
                         </Box>
                         <Container maxW="48rem" mb="1rem" px="1.5rem">
                           {children}

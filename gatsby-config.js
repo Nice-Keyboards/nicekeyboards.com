@@ -36,18 +36,9 @@ module.exports = {
         },
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 650,
-              backgroundColor: "transparent",
-              disableBgImageOnAlpha: true,
-              linkImagesToOriginal: false,
-            },
-          },
-          {
             resolve: `gatsby-remark-images-medium-zoom`,
             options: {
-              background: "rgba(26, 32, 44, 0.5)",
+              background: "rgba(26, 32, 44, 0.7)",
             },
           },
         ],
@@ -61,12 +52,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          {
-            resolve: `gatsby-remark-images-medium-zoom`,
-            options: {
-              background: "rgba(26, 32, 44, 0.5)",
-            },
-          },
+          `gatsby-remark-images-medium-zoom`,
           {
             resolve: "gatsby-remark-autolink-headers",
             options: {
@@ -95,5 +81,6 @@ module.exports = {
     },
     "@chakra-ui/gatsby-plugin",
     "gatsby-plugin-netlify",
+    "gatsby-plugin-image",
   ],
 };
