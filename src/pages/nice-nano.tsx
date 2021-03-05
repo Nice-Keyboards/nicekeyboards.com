@@ -13,11 +13,13 @@ import {
   Td,
   Tr,
 } from "@chakra-ui/react";
+import { css } from "@emotion/react";
 import { faArrowRight } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Helmet } from "react-helmet";
+import theme from "../@chakra-ui/gatsby-plugin/theme";
 import Layout from "../components/layout";
 
 const stores = [
@@ -66,6 +68,9 @@ const stores = [
     ],
   },
 ];
+
+const gray900 = theme.colors.gray[900];
+const gray600 = theme.colors.gray[600];
 
 const niceNano = () => {
   return (
@@ -196,6 +201,11 @@ const niceNano = () => {
                 maxWidth="350px"
                 w="100%"
                 ml="1rem"
+                css={css`
+                  filter: drop-shadow(
+                    0px 10px 20px ${useColorModeValue(gray600, gray900)}
+                  );
+                `}
               >
                 <StaticImage
                   src="../images/nicenano2.png"
@@ -319,6 +329,11 @@ const niceNano = () => {
                 maxWidth="500px"
                 w="100%"
                 ml="1rem"
+                css={css`
+                  filter: drop-shadow(
+                    0px 10px 20px ${useColorModeValue(gray600, gray900)}
+                  );
+                `}
               >
                 <StaticImage
                   src="../images/drag-n-drop.png"
@@ -355,7 +370,7 @@ const niceNano = () => {
                 {stores.map((region) => (
                   <>
                     <Heading
-                      color={useColorModeValue("cyan.500", "cyan.300")}
+                      color={useColorModeValue("gray.600", "gray.400")}
                       pt="1.5rem"
                       pb="0.5rem"
                     >
@@ -375,6 +390,7 @@ const niceNano = () => {
                           py="0.5rem"
                           px="1rem"
                           textDecor="underline"
+                          color={useColorModeValue("cyan.500", "cyan.300")}
                           fontSize="1.25rem"
                         >
                           {store.name}
