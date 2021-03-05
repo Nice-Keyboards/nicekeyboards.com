@@ -370,7 +370,7 @@ const niceNano = () => {
                 {stores.map((region) => (
                   <>
                     <Heading
-                      color={useColorModeValue("gray.600", "gray.400")}
+                      color={useColorModeValue("gray.600", "cyan.300")}
                       pt="1.5rem"
                       pb="0.5rem"
                     >
@@ -390,7 +390,7 @@ const niceNano = () => {
                           py="0.5rem"
                           px="1rem"
                           textDecor="underline"
-                          color={useColorModeValue("cyan.500", "cyan.300")}
+                          color={useColorModeValue("cyan.500", "gray.100")}
                           fontSize="1.25rem"
                         >
                           {store.name}
