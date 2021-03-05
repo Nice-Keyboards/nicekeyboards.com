@@ -44,7 +44,7 @@ const slideIn = keyframes`
   }
 `
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <Layout>
     <Helmet>
       <title>Nice Keyboards</title>
@@ -230,19 +230,5 @@ const IndexPage = ({ data }) => (
     </Box>
   </Layout>
 );
-
-export const query = graphql`{
-  nicenano: file(relativePath: {eq: "nicenano.png"}) {
-    childImageSharp {
-      gatsbyImageData(height: 400, quality: 80, placeholder: NONE, layout: CONSTRAINED)
-    }
-  }
-  nice60: file(relativePath: {eq: "nice60home.png"}) {
-    childImageSharp {
-      gatsbyImageData(width: 900, quality: 80, placeholder: NONE, layout: CONSTRAINED)
-    }
-  }
-}
-`;
 
 export default IndexPage;
