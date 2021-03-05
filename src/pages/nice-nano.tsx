@@ -29,8 +29,8 @@ const niceNano = () => {
       <Box mb={20}>
         <Box
           as="section"
-          pt={{ base: "6rem", md: "8rem" }}
-          pb="3rem"
+          pt={{ base: "4rem", md: "6rem" }}
+          pb="0.01rem"
           backgroundImage={`url('/nicenanobg-${useColorModeValue(
             "light",
             "dark"
@@ -39,7 +39,7 @@ const niceNano = () => {
           backgroundPosition="center"
         >
           <Container maxW="1280px" my="2rem">
-            <Flex justify="center" wrap="wrap">
+            <Flex justify="center" alignItems="center" wrap="wrap">
               <Box
                 mr="1em"
                 maxHeight="50vh"
@@ -95,14 +95,12 @@ const niceNano = () => {
             </Flex>
           </Container>
         </Box>
-        <Box as="section" pt={{ base: "2rem", md: "4rem" }} pb="3rem">
+        <Box as="section">
           <Container maxW="1280px" my="2rem">
             <Flex justify="center" alignItems="center" wrap="wrap">
               <Box
                 mr="1em"
                 maxHeight="50vh"
-                maxWidth="275px"
-                w="100%"
                 ml="1rem"
               >
                 <video
