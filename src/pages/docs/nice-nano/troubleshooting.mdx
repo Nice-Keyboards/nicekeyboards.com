@@ -15,7 +15,7 @@ Troubleshooting your nice!nano often falls on to the firmware of choice, but a f
 In this case you can most likely re-flash the bootloader using [`adafruit-nrfutil`](https://github.com/adafruit/Adafruit_nRF52_nrfutil). Here are the steps you'll want to follow:
 
 1. Follow the installation section [here](https://github.com/adafruit/Adafruit_nRF52_nrfutil#installation). Most likely you'll just need to run `pip3 install --user adafruit-nrfutil`.
-2. Download the [DFU pkg of the nice!nano bootloader](//docs.nicekeyboards.com/assets/nice_nano_bootloader-_s140_6.1.1.zip).
+2. Download the [DFU pkg of the nice!nano bootloader](/assets/nice_nano_bootloader-_s140_6.1.1.zip).
 3. Connect your nice!nano and put it into the bootloader using a double-tap reset.
 4. Run the following command in your terminal:
 
@@ -37,12 +37,12 @@ If you can't get into the bootloader anymore, this will mean you'll need a devic
 #### [J-Link (~$30)](https://www.amazon.com/Segger-J-Link-EDU-mini-Debugger/dp/B0758XRMTF)
 
 1. Plug in your nice!nano over USB
-2. Connect these 4 pins to the nice!nano (use the [pinout](/nice!nano/pinout_schematic) as reference)
+2. Connect these 4 pins to the nice!nano (use the [pinout](/docs/nice-nano/pinout-schematic) as reference)
    1. VCC/VTref will connect to the VCC pin on the nice!nano
    2. GND will connect to any of the GND pins on the nice!nano
    3. SWDIO will connect to the SWD pin on the back of the nice!nano
    4. SWCLK will connect to the SWC pin on the back of the nice!nano
-3. Download the [bootloader hex](//docs.nicekeyboards.com/assets/nicenano_bootloader_v1.hex)
+3. Download the [bootloader hex](/assets/nicenano_bootloader_v1.hex)
 4. Download [`nrfjprog`](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools/Download#infotabs)
 5. Run this command in your terminal 
 
@@ -53,10 +53,10 @@ nrfjprog -f NRF52 --program nicenano_bootloader_v1.hex --chiperase
 #### [ST-Link v2 (~$4)](https://www.aliexpress.com/wholesale?trafficChannel=main&d=y&CatId=0&SearchText=st+link+v2&ltype=wholesale&SortType=total_tranpro_desc&groupsort=1&page=1)
 
 1. Plug in your nice!nano over USB
-2. Connect these 2 pins to the nice!nano (use the [pinout](/nice!nano/pinout_schematic) as reference)
+2. Connect these 2 pins to the nice!nano (use the [pinout](/docs/nice-nano/pinout-schematic) as reference)
    1. SWDIO will connect to the SWD pin on the back of the nice!nano
    2. SWCLK will connect to the SWC pin on the back of the nice!nano
-3. Download the [bootloader hex](//docs.nicekeyboards.com/assets/nicenano_bootloader_v1.hex)
+3. Download the [bootloader hex](/assets/nicenano_bootloader_v1.hex)
 4. Download [`openocd`](https://github.com/xpack-dev-tools/openocd-xpack/releases)
 5. Run this command in your terminal
 

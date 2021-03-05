@@ -16,14 +16,12 @@ interface HighlightProps {
   codeString: string
   language: Language
   metastring?: string
-  showLines?: boolean
 }
 
 function Highlight({
   codeString,
   language,
   metastring,
-  showLines,
   ...props
 }: HighlightProps) {
 
@@ -43,13 +41,9 @@ function Highlight({
               return (
                 <chakra.div
                   px="5"
+                  whiteSpace="normal"
                   {...lineProps}
                 >
-                  {showLines && (
-                    <chakra.span opacity={0.3} mr="6" fontSize="xs">
-                      {i + 1}
-                    </chakra.span>
-                  )}
                   {line.map((token, key) => (
                     <span {...getTokenProps({ token, key })} />
                   ))}
@@ -74,6 +68,8 @@ const CopyButton = (props) => (
     top={0}
     zIndex="1"
     right="1.25em"
+    opacity="0.5"
+    _hover={{opacity: 1}}
     {...props}
   />
 )
@@ -100,12 +96,11 @@ function CodeBlock(props) {
 
   return (
     <Box position="relative" zIndex="0">
-      <CodeContainer px="0" overflow="hidden">
+      <CodeContainer px="0">
         <Highlight
           codeString={editorCode}
           language={language}
           metastring={ln}
-          showLines={viewlines}
         />
       </CodeContainer>
       <CopyButton top="4" onClick={onCopy}>
