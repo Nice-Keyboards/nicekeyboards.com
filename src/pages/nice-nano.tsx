@@ -98,11 +98,7 @@ const niceNano = () => {
         <Box as="section">
           <Container maxW="1280px" my="2rem">
             <Flex justify="center" alignItems="center" wrap="wrap">
-              <Box
-                mr="1em"
-                maxHeight="50vh"
-                ml="1rem"
-              >
+              <Box mr="1em" maxHeight="50vh" ml="1rem">
                 <video
                   height={450}
                   style={{ maxHeight: "50vh", height: "450px" }}
@@ -116,11 +112,6 @@ const niceNano = () => {
                     src="/nicenano-thin.mov"
                     type="video/quicktime"
                   ></source>
-                  <img
-                    src="/nicenano-thin.gif"
-                    height={450}
-                    style={{ maxHeight: "50vh", height: "450px" }}
-                  />
                 </video>
               </Box>
               <Box textAlign="center" pt="2rem">
