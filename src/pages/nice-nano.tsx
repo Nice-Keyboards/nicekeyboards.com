@@ -114,9 +114,14 @@ const niceNano = () => {
                 >
                   <source src="/nicenano-thin.webm" type="video/webm" />
                   <source
-                    src="/nicenano-thin.m4v"
+                    src="/nicenano-thin.mov"
                     type="video/quicktime"
                   ></source>
+                  <img
+                    src="/nicenano-thin.gif"
+                    height={450}
+                    style={{ maxHeight: "50vh", height: "450px" }}
+                  />
                 </video>
               </Box>
               <Box textAlign="center" pt="2rem">
