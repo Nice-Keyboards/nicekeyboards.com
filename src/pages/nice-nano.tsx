@@ -109,6 +109,7 @@ const niceNano = () => {
                   height={450}
                   style={{ maxHeight: "50vh", height: "450px" }}
                   autoPlay
+                  playsInline
                   loop
                   muted
                 >
