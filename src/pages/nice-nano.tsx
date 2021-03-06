@@ -191,7 +191,7 @@ const niceNano = () => {
                   fontSize={{ base: "lg", lg: "xl" }}
                   mt="6"
                 >
-                  Built using a power-conscious design and parts, the nice!nano
+                  Built using power-conscious design and parts, the nice!nano
                   stretches battery life to its limits.
                 </Text>
               </Box>
@@ -234,11 +234,11 @@ const niceNano = () => {
                   loop
                   muted
                 >
-                  <source src="/nicenano-thin.webm" type="video/webm" />
                   <source
                     src="/nicenano-thin.mov"
                     type="video/quicktime"
                   ></source>
+                  <source src="/nicenano-thin.webm" type="video/webm" />
                 </video>
               </Box>
               <Box textAlign="center" pt="2rem">
