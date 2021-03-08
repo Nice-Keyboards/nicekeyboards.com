@@ -225,7 +225,7 @@ const niceNano = () => {
         <Box as="section">
           <Container maxW="1280px" my="2rem">
             <Flex justify="space-evenly" alignItems="center" wrap="wrap">
-              <Box mr="1em" maxHeight="50vh" ml="1rem">
+              <Box mr="1em" height="450" maxHeight="50vh" ml="1rem">
                 <video
                   height={450}
                   style={{ maxHeight: "50vh", height: "450px" }}
@@ -353,7 +353,7 @@ const niceNano = () => {
         <Box as="section">
           <Container maxW="1280px" my="2rem">
             <Flex justify="space-evenly" alignItems="center" wrap="wrap">
-              <Box textAlign="center" pt="3rem">
+              <Box textAlign="center" pt="3rem" id="find-a-store">
                 <chakra.h1
                   maxW="20ch"
                   mx="auto"
@@ -368,7 +368,7 @@ const niceNano = () => {
                 </chakra.h1>
 
                 {stores.map((region) => (
-                  <>
+                  <React.Fragment key={region.region}>
                     <Heading
                       color={useColorModeValue("gray.600", "cyan.300")}
                       pt="1.5rem"
@@ -389,6 +389,7 @@ const niceNano = () => {
                           rel="noopener"
                           py="0.5rem"
                           px="1rem"
+                          key={store.name}
                           textDecor="underline"
                           color={useColorModeValue("cyan.500", "gray.100")}
                           fontSize="1.25rem"
@@ -397,7 +398,7 @@ const niceNano = () => {
                         </Link>
                       ))}
                     </Flex>
-                  </>
+                  </React.Fragment>
                 ))}
               </Box>
               <Box textAlign="center" pt="3rem">

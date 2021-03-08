@@ -16,10 +16,16 @@ const nice60 = () => {
       </Helmet>
       <Box>
         <Box as="section" pt={{ base: "8rem", md: "10rem" }} pb="5rem">
-        <Container maxW="1280px" my="2rem" display="flex" flexDir="column" alignItems="center">
-          <img src="/under_construction.svg" style={{height: '16rem'}}/>
-          <Heading pt="2rem">Coming Soon</Heading>
-        </Container>
+          <Container
+            maxW="1280px"
+            my="2rem"
+            display="flex"
+            flexDir="column"
+            alignItems="center"
+          >
+            <img src="/under_construction.svg" style={{ height: "16rem" }} />
+            <Heading pt="2rem">Coming Soon</Heading>
+          </Container>
         </Box>
       </Box>
     </Layout>

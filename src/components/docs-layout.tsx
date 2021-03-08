@@ -1,4 +1,22 @@
-import { Box, Container, Flex, Input, InputGroup, InputLeftElement, ListItem, UnorderedList, useColorModeValue } from "@chakra-ui/react";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Container,
+  Flex,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  ListItem,
+  UnorderedList,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { MDXProvider } from "@mdx-js/react";
 import { graphql, Link, StaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
@@ -19,12 +37,12 @@ interface NavNode {
   };
 }
 
-const NavItem = ({location,  title, description, slug, children }) => {
+const NavItem = ({ location, title, description, slug, children }) => {
   const activePage =
     location.pathname === "/" + slug ||
     location.pathname + "/" === "/" + slug ||
     location.pathname === "/" + slug + "/";
-  
+
   return (
     <>
       <Link to={"/" + slug}>
@@ -54,10 +72,10 @@ const NavItem = ({location,  title, description, slug, children }) => {
   );
 };
 
-const DocsLayout = ({children }) => {
+const DocsLayout = ({ children }) => {
   return (
     <Location>
-      {({location}) => (
+      {({ location }) => (
         <StaticQuery
           query={graphql`
             query DocsSidebarQuery {
@@ -123,6 +141,20 @@ const DocsLayout = ({children }) => {
               }
             }
 
+            const docsNav = Object.keys(nav.children.docs.children)
+              .sort(
+                (a, b) =>
+                  nav.children.docs.children[a].order -
+                  nav.children.docs.children[b].order
+              )
+              .map((p) => (
+                <NavItem
+                  key={p}
+                  location={location}
+                  {...nav.children.docs.children[p]}
+                />
+              ));
+
             return (
               <MDXProvider components={{ ...MDXComponents }}>
                 <Layout>
@@ -139,7 +171,7 @@ const DocsLayout = ({children }) => {
                   </Helmet>
                   <Box as="section" pt={{ base: "5rem", md: "6rem" }} pb="5rem">
                     <Container maxW="1280px">
-                      <Flex>
+                      <Flex flexDir={{ base: "column", md: "row" }}>
                         <Box
                           w="17rem"
                           pr="1rem"
@@ -149,29 +181,50 @@ const DocsLayout = ({children }) => {
                             "gray.100",
                             "gray.700"
                           )}
+                          display={{ base: "none", md: "block" }}
                         >
-                          <Input
+                          {/* <Input
                             placeholder="Search"
                             variant="filled"
                             focusBorderColor="cyan.400"
                             colorScheme="cyan"
                             size="md"
                             mb="1rem"
-                          />
-                          {Object.keys(nav.children.docs.children)
-                            .sort(
-                              (a, b) =>
-                                nav.children.docs.children[a].order -
-                                nav.children.docs.children[b].order
-                            )
-                            .map((p) => (
-                              <NavItem
-                                key={p}
-                                location={location}
-                                {...nav.children.docs.children[p]}
-                              />
-                            ))}
+                          /> */}
+                          {docsNav}
                         </Box>
+                        <Accordion
+                          display={{ base: "block", md: "none" }}
+                          allowToggle
+                        >
+                          <AccordionItem>
+                            <AccordionButton justifyContent="space-between">
+                              <Breadcrumb>
+                                {parentPage && parentPage.slug && (
+                                  <BreadcrumbItem>
+                                    <BreadcrumbLink
+                                      as={Link}
+                                      to={"/" + parentPage.slug}
+                                    >
+                                      {parentPage.title}
+                                    </BreadcrumbLink>
+                                  </BreadcrumbItem>
+                                )}
+                                <BreadcrumbItem>
+                                  <BreadcrumbLink
+                                    as={Link}
+                                    to={"/" + currentPage.slug}
+                                    isCurrentPage
+                                  >
+                                    {currentPage.title}
+                                  </BreadcrumbLink>
+                                </BreadcrumbItem>
+                              </Breadcrumb>
+                              <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel>{docsNav}</AccordionPanel>
+                          </AccordionItem>
+                        </Accordion>
                         <Container maxW="48rem" mb="1rem" px="1.5rem">
                           {children}
                         </Container>
