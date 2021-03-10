@@ -234,13 +234,13 @@ const niceNano = () => {
                   muted
                 >
                   <source
-                    src="/nicenano-thin.webm"
-                    type={`video/webm;codecs="vp9"`}
+                    src="/nicenano-thin.mov"
+                    type={`video/quicktime; codecs=hvc1`}
                   />
                   <source
-                    src="/nicenano-thin.mov"
-                    type="video/quicktime"
-                  ></source>
+                    src="/nicenano-thin.webm"
+                    type={`video/webm; codecs=vp9`}
+                  />
                 </video>
               </Box>
               <Box textAlign="center" pt="2rem">
