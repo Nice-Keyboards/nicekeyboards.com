@@ -68,7 +68,7 @@ const aboutPage = () => {
               <Text>
                 Each product is designed carefully with a tinkering user in
                 mind. Schematics are public to offer a deeper look into how the
-                board is designed. Documentation and support channels readily
+                board is designed. Documentation and support channels are readily
                 available to get any question answered.
               </Text>
             </VStack>
