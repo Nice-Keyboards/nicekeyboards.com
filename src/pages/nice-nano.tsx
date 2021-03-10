@@ -430,7 +430,7 @@ const niceNano = () => {
                     </Tr>
                     <Tr>
                       <Td>GPIO Pins</Td>
-                      <Td isNumeric>23 (21 thru hold, 2 pads)</Td>
+                      <Td isNumeric>23 (21 thru hole, 2 pads)</Td>
                     </Tr>
                     <Tr>
                       <Td>Battery Charger</Td>
