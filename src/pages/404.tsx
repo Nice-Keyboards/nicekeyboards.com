@@ -8,7 +8,6 @@ const NotFoundPage = () => {
     <Layout>
       <Helmet>
         <title>Not found</title>
-        <html lang="en" />
       </Helmet>
       <Box as="section" pt={{ base: "8rem", md: "10rem" }} pb="5rem">
         <Container

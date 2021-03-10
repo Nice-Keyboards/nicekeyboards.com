@@ -12,7 +12,6 @@ const nice60 = () => {
           name="description"
           content="The nice!60 is a wireless standard 60% PCB with hotswap sockets and underglow with unbelievable battery life."
         />
-        <html lang="en" />
       </Helmet>
       <Box>
         <Box as="section" pt={{ base: "8rem", md: "10rem" }} pb="5rem">

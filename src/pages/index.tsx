@@ -49,7 +49,6 @@ const IndexPage = () => (
     <Helmet>
       <title>Nice Keyboards</title>
       <meta name="description" content="Cutting edge wireless mechanical keyboard solutions" />
-      <html lang="en" />
     </Helmet>
     <Box mb={20}>
       <Box as="section" pt={{ base: "8rem", md: "10rem" }} pb="5rem" backgroundImage={`url('/nicenanobg-${useColorModeValue('light', 'dark')}.svg')`} backgroundSize="cover" backgroundPosition="center">

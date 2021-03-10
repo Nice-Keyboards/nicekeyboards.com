@@ -81,7 +81,6 @@ const niceNano = () => {
           name="description"
           content="The nice!nano is a Pro Micro drop-in replacement board that makes building wireless keyboards a breeze."
         />
-        <html lang="en" />
       </Helmet>
       <Box mb={20}>
         <Box
