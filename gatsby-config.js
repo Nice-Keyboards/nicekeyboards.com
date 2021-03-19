@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Nice Keyboards",
-    siteUrl: "https://www.nicekeyboards.com",
+    siteUrl: "https://nicekeyboards.com",
     description: "Cutting edge wireless mechanical keyboard solutions",
   },
   plugins: [
