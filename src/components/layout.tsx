@@ -22,13 +22,15 @@ export default function Layout({ children }) {
           `}
         </script>
         <noscript>
-          <img
-            src="https://certify.alexametrics.com/atrk.gif?account=VLImw1WyR620WR"
-            style={{ display: "none" }}
-            height="1"
-            width="1"
-            alt=""
-          />
+          {`
+            <img
+              src="https://certify.alexametrics.com/atrk.gif?account=VLImw1WyR620WR"
+              style={{ display: "none" }}
+              height="1"
+              width="1"
+              alt=""
+            />
+          `}
         </noscript>
       </Helmet>
       <Header />
