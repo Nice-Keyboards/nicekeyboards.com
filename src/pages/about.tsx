@@ -35,6 +35,7 @@ const aboutPage = () => {
           >
             <img
               src="/cutting_edge.svg"
+              alt="Cutting Edge Technology"
               style={{ width: "25rem", height: "18rem", objectFit: "contain" }}
             />
             <VStack py="2rem" maxW="520px">
@@ -74,6 +75,7 @@ const aboutPage = () => {
             </VStack>
             <img
               src="/design.svg"
+              alt="Documentation and Design"
               style={{ width: "25rem", height: "18rem", objectFit: "contain" }}
             />
           </Container>
@@ -91,6 +93,7 @@ const aboutPage = () => {
           >
             <img
               src="/contact.svg"
+              alt="Contact"
               style={{ width: "25rem", height: "18rem", objectFit: "contain" }}
             />
             <VStack py="2rem" maxW="520px">

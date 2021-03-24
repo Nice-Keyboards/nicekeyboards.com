@@ -22,7 +22,7 @@ const nice60 = () => {
             flexDir="column"
             alignItems="center"
           >
-            <img src="/under_construction.svg" style={{ height: "16rem" }} />
+            <img src="/under_construction.svg" alt="Under Construction" style={{ height: "16rem" }} />
             <Heading pt="2rem">Coming Soon</Heading>
           </Container>
         </Box>

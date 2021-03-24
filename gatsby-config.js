@@ -82,5 +82,6 @@ module.exports = {
     "@chakra-ui/gatsby-plugin",
     "gatsby-plugin-netlify",
     "gatsby-plugin-image",
+    "gatsby-plugin-remove-generator",
   ],
 };

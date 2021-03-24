@@ -10,9 +10,6 @@ import {
   BreadcrumbLink,
   Container,
   Flex,
-  Input,
-  InputGroup,
-  InputLeftElement,
   ListItem,
   UnorderedList,
   useColorModeValue,
@@ -23,8 +20,6 @@ import { Helmet } from "react-helmet";
 import React from "react";
 import Layout from "./layout";
 import MDXComponents from "./mdx-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/pro-solid-svg-icons";
 import { Location } from "@reach/router";
 
 interface NavNode {
