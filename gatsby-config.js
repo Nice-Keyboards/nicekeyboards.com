@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingIds: ["G-WEV7JRSTJ5", "GTM-WWVZNPW"],
+        trackingIds: ["G-WEV7JRSTJ5"],
       },
     },
     "gatsby-plugin-sharp",
