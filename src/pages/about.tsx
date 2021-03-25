@@ -69,8 +69,8 @@ const aboutPage = () => {
               <Text>
                 Each product is designed carefully with a tinkering user in
                 mind. Schematics are public to offer a deeper look into how the
-                board is designed. Documentation and support channels are readily
-                available to get any question answered.
+                board is designed. Documentation and support channels are
+                readily available to get any question answered.
               </Text>
             </VStack>
             <img
@@ -111,6 +111,10 @@ const aboutPage = () => {
                   </Link>
                 </strong>{" "}
                 or via Discord at <strong>Nicell#0001</strong>.
+              </Text>
+              <Text>
+                For support questions, reach out on the{" "}
+                <Link href="https://discord.gg/CHd6hUy" color="cyan.400" fontWeight="700">community Discord</Link>
               </Text>
             </VStack>
           </Container>
