@@ -83,5 +83,6 @@ module.exports = {
     "gatsby-plugin-netlify",
     "gatsby-plugin-image",
     "gatsby-plugin-remove-generator",
+    `gatsby-plugin-catch-links`,
   ],
 };

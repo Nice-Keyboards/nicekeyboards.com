@@ -114,7 +114,7 @@ const aboutPage = () => {
               </Text>
               <Text>
                 For support questions, reach out on the{" "}
-                <Link href="https://discord.gg/CHd6hUy" color="cyan.400" fontWeight="700">community Discord</Link>
+                <Link href="https://discord.gg/CHd6hUy" color="cyan.400" fontWeight="700">community Discord</Link>.
               </Text>
             </VStack>
           </Container>
