@@ -1,0 +1,79 @@
+---
+title: Getting Started
+description: A quick guide on how to get started with your nice!60
+order: 1
+---
+
+# Getting Started
+
+This page will give a quick guide on what you'll need to build a keyboard with the nice!60, battery details, 
+and how to customize your keymap.
+
+## Required Parts
+
+ - 61 Cherry MX Style Switches
+ - Cherry MX Compatible Keycap Set with 60% ANSI Coverage
+ - 4x2U, 1x62.5U Stabilizers
+ - 3.7V Lithium Rechargeable Battery
+   - At Least 500mAh
+   - 2-Pin JST-PH (2.00mm) Connector
+ - 60% Case (Standard GH60/DZ60 Style)
+   - Keep in mind that a big metal cage is not cohesive with wireless connections
+   - Make sure thickness of the of your battery and the depth of your case are compatible
+
+## Installing the Battery
+
+When installing the battery on the nice!60, you'll notice it has a 3-pin JST-PH connector. 
+This is done to accommodate batteries with the power or ground flipped either way. 
+Make sure the red wire is being plugged into the PWR pin (in the middle) and the black wire is plugged into the GND pin (on the ends).
+
+![Battery Plug in Configurations](../_images/nice60_battery_install.png)
+
+## Assembling the Keyboard
+
+> Build stream coming soon. In the mean time, here's a build video using a different wired hotswap PCB: https://www.youtube.com/watch?v=deVaUvywGMw
+
+## Default Keymap
+
+The nice!60 is preloaded with the ZMK firmware using the below keymap. Read more about [ZMK here](https://zmkfirmware.dev).
+
+![Default Keymap](../_images/nice60_keymap.png)
+
+## Creating a Custom Keymap and Firmware
+
+Of course, the default keymap will not be perfect for everyone, so you can update your keymap and build new firmware without installing anything on your computer.
+
+You will need a GitHub account to do this.
+
+ 1. Navigate to https://github.com/Nice-Keyboards/nice60-zmk-config
+ 2. Press the Fork button in the top right
+![Step 2](../_images/nice60-custom-firmware-step2.png)
+ 3. After forking is complete, click on the Actions tab
+![Step 3](../_images/nice60-custom-firmware-step3.png)
+ 4. Click on the "I understand" button to enable building your firmware using GitHub Actions
+![Step 4](../_images/nice60-custom-firmware-step4.png)
+ 5. Next click back to the Code tab to the left of the Actions tab
+![Step 5](../_images/nice60-custom-firmware-step5.png)
+ 6. Now we can edit the keymap. Click on the `config` folder
+![Step 6](../_images/nice60-custom-firmware-step6.png)
+ 7. Now click on the `nice60.keymap` file
+![Step 7](../_images/nice60-custom-firmware-step7.png)
+ 8. Click on the edit button 
+![Step 8](../_images/nice60-custom-firmware-step8.png)
+ 9. Edit the keymap as wanted. Use the [ZMK codes docs](https://zmkfirmware.dev/docs/codes/) to find standard HID input options you have for your keymap and check the [Behaviors category](https://zmkfirmware.dev/docs) on the left to find other ZMK specific behaviors.
+
+ 10. When done, scroll to the bottom and commit your changes. Feel free to add a commit title and description to track your changes
+![Step 10](../_images/nice60-custom-firmware-step10.png)
+ 11. Your new firmware should now be building. The first build will take a while. Click on the Actions tab to see the status. When it's complete it will have a green check instead of a yellow dot. If you have an error, you've probably missed a comma, semicolon, or typed in a non-existent key type. Check [this for more information](https://zmkfirmware.dev/docs/troubleshooting#dtlibdterror). Your `nice60.dts.pre.tmp` file is printed in the step after build.
+![Step 11](../_images/nice60-custom-firmware-step3.png)
+ 12. If your firmware builds properly, click on the build title
+![Step 12](../_images/nice60-custom-firmware-step12.png)
+ 13. Now click the `nice60-zmk` link to download your new firmware
+![Step 13](../_images/nice60-custom-firmware-step13.png)
+ 14. Unzip the files. You should have a `zmk.uf2` file, which you'll use
+
+ 15. Take your nice!60 and double-press the reset button on the back below the USB-C port and plug in the board to your computer
+
+ 16. You should get a new drive called `NICE60` if you properly double-pressed the reset button. Drag and drop or copy the `zmk.uf2` you have over to that drive
+![Step 16](../_images/nice60-custom-firmware-step16.png)
+ 17. After it's done your board should auto boot back into your new ZMK firmware. You're done!
