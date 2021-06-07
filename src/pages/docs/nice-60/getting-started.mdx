@@ -39,6 +39,18 @@ The nice!60 is preloaded with the ZMK firmware using the below keymap. Read more
 
 ![Default Keymap](../_images/nice60_keymap.png)
 
+## Managing Wireless Profiles
+
+Check out the [ZMK docs](https://zmkfirmware.dev/docs/behaviors/bluetooth) on how the wireless BLE works.
+
+Generally to manage your profiles, you will use the first column of keys on the left side of the board on the function layer. 
+Press the `Fn` key and the `Esc` key to erase the bond/device on the current active profile and go back into pairing mode. 
+Press the `BT 1/2/3/4` keys on the left side on the `Fn` layer to switch between profiles. 
+
+Extra notes:
+ - You can't connect the same device to multiple profiles. If you're having troubles pairing, try clearing the rest of the profiles.
+ - Don't disconnect the nice!60 from your computer or other device. This clears the bond information and means the nice!60 will refuse to reconnect until you press the `BT CLR` button.
+
 ## Creating a Custom Keymap and Firmware
 
 Of course, the default keymap will not be perfect for everyone, so you can update your keymap and build new firmware without installing anything on your computer.
