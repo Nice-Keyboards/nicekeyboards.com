@@ -1,4 +1,20 @@
-import { Box, chakra, Container, Flex, Text, Heading, useColorModeValue, Table, Tbody, Td, Tr, List, ListItem, ListIcon } from "@chakra-ui/react";
+import {
+  Box,
+  chakra,
+  Link,
+  Container,
+  Flex,
+  Text,
+  Heading,
+  useColorModeValue,
+  Table,
+  Tbody,
+  Td,
+  Tr,
+  List,
+  ListItem,
+  ListIcon,
+} from "@chakra-ui/react";
 import { css, keyframes } from "@emotion/react";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
@@ -7,6 +23,18 @@ import Layout from "../components/layout";
 import theme from "../@chakra-ui/gatsby-plugin/theme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from '@fortawesome/pro-duotone-svg-icons';
+
+const stores = [
+  {
+    region: "North America",
+    stores: [
+      {
+        name: "1upkeyboards",
+        url: "https://1upkeyboards.com/shop/controllers/nice60-ble-pcb/",
+      },
+    ]
+  },
+];
 
 const gray900 = theme.colors.gray[900];
 const gray600 = theme.colors.gray[600];
@@ -344,7 +372,39 @@ const nice60 = () => {
                   pt="1.5rem"
                   pb="0.5rem"
                 >
-                  Coming Soon
+                  {stores.map((region) => (
+                    <React.Fragment key={region.region}>
+                      <Heading
+                        color={useColorModeValue("gray.600", "cyan.300")}
+                        pt="1.5rem"
+                        pb="0.5rem"
+                      >
+                        {region.region}
+                      </Heading>
+                      <Flex
+                        justify="center"
+                        alignItems="center"
+                        wrap="wrap"
+                        maxW="460px"
+                      >
+                        {region.stores.map((store) => (
+                          <Link
+                            target="_blank"
+                            href={store.url}
+                            rel="noopener"
+                            py="0.5rem"
+                            px="1rem"
+                            key={store.name}
+                            textDecor="underline"
+                            color={useColorModeValue("cyan.500", "gray.100")}
+                            fontSize="1.25rem"
+                          >
+                            {store.name}
+                          </Link>
+                        ))}
+                      </Flex>
+                    </React.Fragment>
+                  ))}
                 </Heading>
               </Box>
               <Box textAlign="center" pt="3rem">
