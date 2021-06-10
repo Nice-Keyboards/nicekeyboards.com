@@ -209,7 +209,7 @@ const IndexPage = () => (
                   as="div"
                   rightIcon={<FontAwesomeIcon icon={faArrowRight} />}
                 >
-                  Coming Soon
+                  Learn More
                 </Button>
               </Link>
               <Text
