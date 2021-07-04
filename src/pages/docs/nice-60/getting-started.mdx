@@ -35,13 +35,13 @@ Make sure the red wire is being plugged into the PWR pin (in the middle) and the
 
 ## Default Keymap
 
-The nice!60 is preloaded with the ZMK firmware using the below keymap. Read more about [ZMK here](https://zmkfirmware.dev).
+The nice!60 is preloaded with the ZMK firmware using the below keymap. Read more about [ZMK here](https://zmk.dev).
 
 ![Default Keymap](../_images/nice60_keymap.png)
 
 ## Managing Wireless Profiles
 
-Check out the [ZMK docs](https://zmkfirmware.dev/docs/behaviors/bluetooth) on how the wireless BLE works.
+Check out the [ZMK docs](https://zmk.dev/docs/behaviors/bluetooth) on how the wireless BLE works.
 
 Generally to manage your profiles, you will use the first column of keys on the left side of the board on the function layer. 
 Press the `Fn` key and the `Esc` key to erase the bond/device on the current active profile and go back into pairing mode. 
@@ -72,11 +72,11 @@ You will need a GitHub account to do this.
 ![Step 7](../_images/nice60-custom-firmware-step7.png)
  8. Click on the edit button 
 ![Step 8](../_images/nice60-custom-firmware-step8.png)
- 9. Edit the keymap as wanted. Use the [ZMK codes docs](https://zmkfirmware.dev/docs/codes/) to find standard HID input options you have for your keymap and check the [Behaviors category](https://zmkfirmware.dev/docs) on the left to find other ZMK specific behaviors.
+ 9. Edit the keymap as wanted. Use the [ZMK codes docs](https://zmk.dev/docs/codes/) to find standard HID input options you have for your keymap and check the [Behaviors category](https://zmk.dev/docs) on the left to find other ZMK specific behaviors.
 
  10. When done, scroll to the bottom and commit your changes. Feel free to add a commit title and description to track your changes
 ![Step 10](../_images/nice60-custom-firmware-step10.png)
- 11. Your new firmware should now be building. The first build will take a while. Click on the Actions tab to see the status. When it's complete it will have a green check instead of a yellow dot. If you have an error, you've probably missed a comma, semicolon, or typed in a non-existent key type. Check [this for more information](https://zmkfirmware.dev/docs/troubleshooting#dtlibdterror). Your `nice60.dts.pre.tmp` file is printed in the step after build.
+ 11. Your new firmware should now be building. The first build will take a while. Click on the Actions tab to see the status. When it's complete it will have a green check instead of a yellow dot. If you have an error, you've probably missed a comma, semicolon, or typed in a non-existent key type. Check [this for more information](https://zmk.dev/docs/troubleshooting#dtlibdterror). Your `nice60.dts.pre.tmp` file is printed in the step after build.
 ![Step 11](../_images/nice60-custom-firmware-step3.png)
  12. If your firmware builds properly, click on the build title
 ![Step 12](../_images/nice60-custom-firmware-step12.png)
