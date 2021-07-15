@@ -15,12 +15,12 @@ Troubleshooting your nice!nano often falls on to the firmware of choice, but a f
 In this case you can most likely re-flash the bootloader using [`adafruit-nrfutil`](https://github.com/adafruit/Adafruit_nRF52_nrfutil). Here are the steps you'll want to follow:
 
 1. Follow the installation section [here](https://github.com/adafruit/Adafruit_nRF52_nrfutil#installation). Most likely you'll just need to run `pip3 install --user adafruit-nrfutil`.
-2. Download the [DFU pkg of the nice!nano bootloader](/assets/nice_nano_bootloader-_s140_6.1.1.zip).
+2. Download the [DFU pkg of the nice!nano bootloader](/assets/nice_nano_bootloader-0.6.0_s140_6.1.1).
 3. Connect your nice!nano and put it into the bootloader using a double-tap reset.
 4. Run the following command in your terminal:
 
 ```shell
-adafruit-nrfutil --verbose dfu serial --package nice_nano_bootloader-_s140_6.1.1.zip -p SERIALPORT -b 115200 --singlebank --touch 1200
+adafruit-nrfutil --verbose dfu serial --package nice_nano_bootloader-0.6.0_s140_6.1.1 -p SERIALPORT -b 115200 --singlebank --touch 1200
 ```
 
 However, replace `SERIALPORT` with your respective serial port name on your OS.
@@ -42,12 +42,12 @@ If you can't get into the bootloader anymore, this will mean you'll need a devic
    2. GND will connect to any of the GND pins on the nice!nano
    3. SWDIO will connect to the SWD pin on the back of the nice!nano
    4. SWCLK will connect to the SWC pin on the back of the nice!nano
-3. Download the [bootloader hex](/assets/nicenano_bootloader_v1.hex)
+3. Download the [bootloader hex](/assets/nice_nano_bootloader-0.6.0_s140_6.1.1.hex)
 4. Download [`nrfjprog`](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools/Download#infotabs)
 5. Run this command in your terminal 
 
 ```shell
-nrfjprog -f NRF52 --program nicenano_bootloader_v1.hex --chiperase
+nrfjprog -f NRF52 --program nice_nano_bootloader-0.6.0_s140_6.1.1.hex --chiperase
 ```
 
 #### [ST-Link v2 (~$4)](https://www.aliexpress.com/wholesale?trafficChannel=main&d=y&CatId=0&SearchText=st+link+v2&ltype=wholesale&SortType=total_tranpro_desc&groupsort=1&page=1)
@@ -56,12 +56,12 @@ nrfjprog -f NRF52 --program nicenano_bootloader_v1.hex --chiperase
 2. Connect these 2 pins to the nice!nano (use the [pinout](/docs/nice-nano/pinout-schematic) as reference)
    1. SWDIO will connect to the SWD pin on the back of the nice!nano
    2. SWCLK will connect to the SWC pin on the back of the nice!nano
-3. Download the [bootloader hex](/assets/nicenano_bootloader_v1.hex)
+3. Download the [bootloader hex](/assets/nice_nano_bootloader-0.6.0_s140_6.1.1.hex)
 4. Download [`openocd`](https://github.com/xpack-dev-tools/openocd-xpack/releases)
 5. Run this command in your terminal
 
 ```shell
-openocd -f interface/stlink.cfg -f target/nrf52.cfg -c "gdb_flash_program enable" -c "gdb_breakpoint_override hard" -c "init" -c "reset halt" -c "flash write_image erase ./nicenano_bootloader_v1.hex"
+openocd -f interface/stlink.cfg -f target/nrf52.cfg -c "gdb_flash_program enable" -c "gdb_breakpoint_override hard" -c "init" -c "reset halt" -c "flash write_image erase ./nice_nano_bootloader-0.6.0_s140_6.1.1.hex"
 ```
 
 ## My nice!nano won't connect to my host device over BLE

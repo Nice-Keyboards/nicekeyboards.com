@@ -433,11 +433,11 @@ const niceNano = () => {
                     </Tr>
                     <Tr>
                       <Td>GPIO Pins</Td>
-                      <Td isNumeric>23 (21 thru hole, 2 pads)</Td>
+                      <Td isNumeric>21</Td>
                     </Tr>
                     <Tr>
                       <Td>Battery Charger</Td>
-                      <Td isNumeric>4.2V Lithium @ 100mA rate</Td>
+                      <Td isNumeric>4.2V Lithium @ 100/500mA rate</Td>
                     </Tr>
                     <Tr>
                       <Td>Voltage</Td>
@@ -445,7 +445,7 @@ const niceNano = () => {
                     </Tr>
                     <Tr>
                       <Td>Quiescent Current</Td>
-                      <Td isNumeric>~60μA</Td>
+                      <Td isNumeric>~20μA</Td>
                     </Tr>
                     <Tr>
                       <Td>PCB</Td>

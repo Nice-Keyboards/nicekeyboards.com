@@ -4,9 +4,30 @@ description: Pinout and schematic for the nice!nano
 order: 4
 ---
 
-# Pinout
+# nice!nano v2
 
-![Pinout](../_images/pinout.png)
+## Pinout
+
+![Pinout v1](../_images/pinout_nice_nano_v2.png)
+
+### To further clarify:
+
+- P0.04 (AIN2) is used to read the voltage of the battery via ADC. It can't be used for any other function.
+- P0.13 on VCC shuts off the power to VCC when you set it to low
+  - This saves on battery immensely for LEDs of all kinds that eat power even when off
+
+## Schematic 
+
+![Schematic v1](../_images/schematic_nice_nano_v2.png)
+
+<br/>
+<br/>
+
+# nice!nano v1
+
+## Pinout
+
+![Pinout v1](../_images/pinout.png)
 
 ### To further clarify:
 
@@ -14,6 +35,6 @@ order: 4
 - P0.13 on VCC shuts off the power to VCC when you set it to high
   - This saves on battery immensely for LEDs of all kinds that eat power even when off
 
-# Schematic
+## Schematic
 
-![Schematic](../_images/schematic.png)
+![Schematic v1](../_images/schematic.png)
