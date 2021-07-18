@@ -65,7 +65,7 @@ const IndexPage = () => (
               ml="1rem"
             >
               <StaticImage
-                src="../images/nicenano.png"
+                src="../images/nicenano-v2.png"
                 alt="nice!nano"
                 height={400}
                 placeholder="none"

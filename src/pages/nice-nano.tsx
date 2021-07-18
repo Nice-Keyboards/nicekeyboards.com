@@ -104,7 +104,7 @@ const niceNano = () => {
                 ml="1rem"
               >
                 <StaticImage
-                  src="../images/nicenano.png"
+                  src="../images/nicenano-v2.png"
                   alt="nice!nano"
                   height={400}
                   placeholder="none"
@@ -207,7 +207,7 @@ const niceNano = () => {
                 `}
               >
                 <StaticImage
-                  src="../images/nicenano2.png"
+                  src="../images/nicenano-v2-2.png"
                   alt="nice!nano"
                   height={400}
                   placeholder="none"
