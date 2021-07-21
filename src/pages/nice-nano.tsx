@@ -53,8 +53,7 @@ const stores = [
       },
       {
         name: "splitkb.com",
-        url:
-          "https://splitkb.com/collections/keyboard-parts/products/nice-nano-rev1-0",
+        url: "https://splitkb.com/collections/keyboard-parts/products/nice-nano-rev1-0",
       },
     ],
   },
@@ -64,6 +63,10 @@ const stores = [
       {
         name: "Daily Clack",
         url: "https://dailyclack.com/products/nice-nano-v1-0",
+      },
+      {
+        name: "Custom KBD",
+        url: "https://customkbd.com/",
       },
     ],
   },
