@@ -40,7 +40,7 @@ const stores = [
       },
       {
         name: "Clawsome Boards",
-        url: "https://www.clawboards.xyz/shop",
+        url: "https://www.clawboards.xyz/shop/p/nicenano",
       },
     ],
   },
@@ -53,7 +53,7 @@ const stores = [
       },
       {
         name: "splitkb.com",
-        url: "https://splitkb.com/collections/keyboard-parts/products/nice-nano-rev1-0",
+        url: "https://splitkb.com/collections/keyboard-parts/products/nice-nano",
       },
     ],
   },
