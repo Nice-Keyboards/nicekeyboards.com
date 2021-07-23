@@ -66,7 +66,7 @@ const stores = [
       },
       {
         name: "Custom KBD",
-        url: "https://customkbd.com/",
+        url: "https://customkbd.com/collections/other-components/products/nice-nano",
       },
     ],
   },
