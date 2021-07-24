@@ -62,7 +62,7 @@ const stores = [
     stores: [
       {
         name: "Daily Clack",
-        url: "https://dailyclack.com/products/nice-nano-v1-0",
+        url: "https://dailyclack.com/products/nice-nano-v2-0",
       },
       {
         name: "Custom KBD",
