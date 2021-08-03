@@ -1,11 +1,9 @@
 import {
   Box,
   chakra,
-  Link,
   Container,
   Flex,
   Text,
-  Heading,
   useColorModeValue,
   Table,
   Tbody,
@@ -23,6 +21,7 @@ import Layout from "../components/layout";
 import theme from "../@chakra-ui/gatsby-plugin/theme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from '@fortawesome/pro-duotone-svg-icons';
+import FindAStore from "../components/find-a-store";
 
 const stores = [
   {
@@ -31,6 +30,7 @@ const stores = [
       {
         name: "1upkeyboards",
         url: "https://1upkeyboards.com/shop/controllers/nice60-ble-pcb/",
+        country: "US",
       },
     ]
   },
@@ -354,59 +354,7 @@ const nice60 = () => {
         <Box as="section">
           <Container maxW="1280px" my="2rem">
             <Flex justify="space-evenly" alignItems="flex-start" wrap="wrap">
-              <Box textAlign="center" pt="3rem" id="find-a-store">
-                <chakra.h1
-                  maxW="20ch"
-                  mx="auto"
-                  fontSize={{ base: "2.25rem", sm: "3rem", lg: "4rem" }}
-                  fontFamily="heading"
-                  letterSpacing="tight"
-                  fontWeight="bold"
-                  mb="16px"
-                  lineHeight="1.2"
-                >
-                  Find a Store
-                </chakra.h1>
-                <Heading
-                  color={useColorModeValue("gray.600", "cyan.300")}
-                  pt="1.5rem"
-                  pb="0.5rem"
-                >
-                  {stores.map((region) => (
-                    <React.Fragment key={region.region}>
-                      <Heading
-                        color={useColorModeValue("gray.600", "cyan.300")}
-                        pt="1.5rem"
-                        pb="0.5rem"
-                      >
-                        {region.region}
-                      </Heading>
-                      <Flex
-                        justify="center"
-                        alignItems="center"
-                        wrap="wrap"
-                        maxW="460px"
-                      >
-                        {region.stores.map((store) => (
-                          <Link
-                            target="_blank"
-                            href={store.url}
-                            rel="noopener"
-                            py="0.5rem"
-                            px="1rem"
-                            key={store.name}
-                            textDecor="underline"
-                            color={useColorModeValue("cyan.500", "gray.100")}
-                            fontSize="1.25rem"
-                          >
-                            {store.name}
-                          </Link>
-                        ))}
-                      </Flex>
-                    </React.Fragment>
-                  ))}
-                </Heading>
-              </Box>
+              <FindAStore stores={stores} />
               <Box textAlign="center" pt="3rem">
                 <chakra.h1
                   maxW="20ch"

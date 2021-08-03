@@ -4,22 +4,18 @@ import {
   Container,
   Flex,
   chakra,
-  Link,
-  Button,
   Text,
-  Heading,
   Table,
   Tbody,
   Td,
   Tr,
 } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { faArrowRight } from "@fortawesome/pro-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Helmet } from "react-helmet";
 import theme from "../@chakra-ui/gatsby-plugin/theme";
+import FindAStore from "../components/find-a-store";
 import Layout from "../components/layout";
 
 const stores = [
@@ -29,18 +25,22 @@ const stores = [
       {
         name: "Boardsource.xyz",
         url: "https://boardsource.xyz/store/5f4a1733bbaa5c635b83ed67",
+        country: "US",
       },
       {
         name: "KeyHive",
         url: "https://keyhive.xyz/shop/nicenano",
+        country: "US",
       },
       {
         name: "Little Keyboards",
         url: "https://www.littlekeyboards.com/products/nice-nano",
+        country: "US",
       },
       {
         name: "Clawsome Boards",
         url: "https://www.clawboards.xyz/shop/p/nicenano",
+        country: "US",
       },
     ],
   },
@@ -50,10 +50,12 @@ const stores = [
       {
         name: "Mechboards",
         url: "https://mechboards.co.uk/shop/components/nicenano/",
+        country: "GB",
       },
       {
         name: "splitkb.com",
         url: "https://splitkb.com/collections/keyboard-parts/products/nice-nano",
+        country: "NL",
       },
     ],
   },
@@ -63,10 +65,12 @@ const stores = [
       {
         name: "Daily Clack",
         url: "https://dailyclack.com/products/nice-nano-v2-0",
+        country: "AU",
       },
       {
         name: "Custom KBD",
         url: "https://customkbd.com/collections/other-components/products/nice-nano",
+        country: "AU",
       },
     ],
   },
@@ -358,54 +362,7 @@ const niceNano = () => {
         <Box as="section">
           <Container maxW="1280px" my="2rem">
             <Flex justify="space-evenly" alignItems="center" wrap="wrap">
-              <Box textAlign="center" pt="3rem" id="find-a-store">
-                <chakra.h1
-                  maxW="20ch"
-                  mx="auto"
-                  fontSize={{ base: "2.25rem", sm: "3rem", lg: "4rem" }}
-                  fontFamily="heading"
-                  letterSpacing="tight"
-                  fontWeight="bold"
-                  mb="16px"
-                  lineHeight="1.2"
-                >
-                  Find a Store
-                </chakra.h1>
-
-                {stores.map((region) => (
-                  <React.Fragment key={region.region}>
-                    <Heading
-                      color={useColorModeValue("gray.600", "cyan.300")}
-                      pt="1.5rem"
-                      pb="0.5rem"
-                    >
-                      {region.region}
-                    </Heading>
-                    <Flex
-                      justify="center"
-                      alignItems="center"
-                      wrap="wrap"
-                      maxW="460px"
-                    >
-                      {region.stores.map((store) => (
-                        <Link
-                          target="_blank"
-                          href={store.url}
-                          rel="noopener"
-                          py="0.5rem"
-                          px="1rem"
-                          key={store.name}
-                          textDecor="underline"
-                          color={useColorModeValue("cyan.500", "gray.100")}
-                          fontSize="1.25rem"
-                        >
-                          {store.name}
-                        </Link>
-                      ))}
-                    </Flex>
-                  </React.Fragment>
-                ))}
-              </Box>
+              <FindAStore stores={stores} />
               <Box textAlign="center" pt="3rem">
                 <chakra.h1
                   maxW="20ch"
