@@ -21,6 +21,7 @@ export default function FindAStore({stores}: {stores: StoreRegion[]}) {
         lineHeight="1.2"
         css={{ scrollMarginBlock: "6rem" }}
         data-group=""
+        pl="1.5rem"
       >
         Find a Store
         <chakra.a
