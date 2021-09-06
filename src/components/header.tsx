@@ -76,9 +76,6 @@ function HeaderContent() {
           <NavItem to="/nice-60">nice!60</NavItem>
           <NavItem to="/docs">Documentation</NavItem>
           <NavItem to="/about">About</NavItem>
-          <NavItem to="https://store.nicekeyboards.com">
-            <b>Limited Time Merch</b>
-          </NavItem>
         </Flex>
         <Flex justify="flex-end" align="center" color="gray.400">
           <ChakraLink
