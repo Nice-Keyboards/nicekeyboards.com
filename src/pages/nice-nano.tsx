@@ -28,6 +28,16 @@ const stores = [
         country: "US",
       },
       {
+        name: "Clawsome Boards",
+        url: "https://www.clawboards.xyz/shop/p/nicenano",
+        country: "US",
+      },
+      {
+        name: "Clickety Split",
+        url: "https://clicketysplit.ca",
+        country: "CA",
+      },
+      {
         name: "KeyHive",
         url: "https://keyhive.xyz/shop/nicenano",
         country: "US",
@@ -38,8 +48,8 @@ const stores = [
         country: "US",
       },
       {
-        name: "Clawsome Boards",
-        url: "https://www.clawboards.xyz/shop/p/nicenano",
+        name: "MKUltra Corp.",
+        url: "https://mkultra.click/",
         country: "US",
       },
     ],
@@ -71,6 +81,16 @@ const stores = [
         name: "Custom KBD",
         url: "https://customkbd.com/collections/other-components/products/nice-nano",
         country: "AU",
+      },
+    ],
+  },
+  {
+    region: "Asia",
+    stores: [
+      {
+        name: "Rectangles.Store",
+        url: "https://rectangles.store/",
+        country: "IN",
       },
     ],
   },
