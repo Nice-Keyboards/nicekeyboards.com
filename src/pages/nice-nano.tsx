@@ -49,7 +49,7 @@ const stores = [
       },
       {
         name: "MKUltra Corp.",
-        url: "https://mkultra.click/",
+        url: "https://mkultra.click/nice-nano-v2/",
         country: "US",
       },
     ],
@@ -89,7 +89,7 @@ const stores = [
     stores: [
       {
         name: "Rectangles.Store",
-        url: "https://rectangles.store/",
+        url: "https://rectangles.store/products/nice-nano-v2-0",
         country: "IN",
       },
     ],
