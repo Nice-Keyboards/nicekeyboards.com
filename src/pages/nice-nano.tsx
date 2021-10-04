@@ -34,7 +34,7 @@ const stores = [
       },
       {
         name: "Clickety Split",
-        url: "https://clicketysplit.ca",
+        url: "https://clicketysplit.ca/products/nice-nano-v2",
         country: "CA",
       },
       {
