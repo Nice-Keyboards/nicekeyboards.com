@@ -7,6 +7,15 @@ interface StoreRegion {
   stores: { name: string; url: string; country: string}[];
 }
 
+const shuffleArray = (arr: Array<any>): Array<any> => {
+  let array = [...arr];
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
 export default function FindAStore({stores}: {stores: StoreRegion[]}) {
   return (
     <Box textAlign="center" pt="3rem" id="find-a-store">
@@ -49,7 +58,7 @@ export default function FindAStore({stores}: {stores: StoreRegion[]}) {
             {region.region}
           </Heading>
           <Flex justify="center" alignItems="center" wrap="wrap" maxW="460px">
-            {region.stores.map((store) => {
+            {shuffleArray(region.stores).map((store) => {
               const Flag = Flags[store.country];
               return (
                 <Link
