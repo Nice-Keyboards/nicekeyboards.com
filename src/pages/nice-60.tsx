@@ -31,8 +31,9 @@ const stores = [
         name: "1upkeyboards",
         url: "https://1upkeyboards.com/shop/controllers/nice60-ble-pcb/",
         country: "US",
+        type: "woocommerce",
       },
-    ]
+    ],
   },
 ];
 
