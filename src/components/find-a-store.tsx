@@ -63,7 +63,7 @@ export default function FindAStore({stores}: {stores: StoreRegion[]}) {
               s.stock = {
                 tag: ".product-mark.sold-out",
                 inStock: undefined,
-                outOfStock: "sold out",
+                outOfStock: "Sold Out",
               };
             }
           case 'woocommerce':
