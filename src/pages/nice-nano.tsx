@@ -66,6 +66,12 @@ const stores = [
           link: "https://fast.a.klaviyo.com/api/v1/catalog/bigcommerce/product-variants?a=WfsDAk&p=298",
         },
       },
+      {
+        name: "Typeractive.xyz",
+        url: "https://typeractive.xyz/products/nice-nano",
+        country: "US",
+        type: "shopify",
+      },
     ],
   },
   {
