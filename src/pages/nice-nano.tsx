@@ -72,6 +72,12 @@ const stores = [
         country: "US",
         type: "shopify",
       },
+      {
+        name: "1upkeyboards",
+        url: "https://1upkeyboards.com/shop/controllers/nicenano-ble-controller/",
+        country: "US",
+        type: "woocommerce",
+      },
     ],
   },
   {
