@@ -95,6 +95,12 @@ const stores = [
         country: "NL",
         type: "shopify",
       },
+      {
+        name: "42. Keebs",
+        url: "https://42keebs.eu/shop/parts/controllers/nicenano-v2-wireless-controller/",
+        country: "CZ",
+        type: "woocommerce",
+      },
     ],
   },
   {
@@ -122,6 +128,12 @@ const stores = [
         url: "https://rectangles.store/products/nice-nano-v2-0",
         country: "IN",
         type: "shopify",
+      },
+      {
+        name: "Next Keyboard Club",
+        url: "https://nextkeyboard.club/product/nicenano/",
+        country: "PH",
+        type: "woocommerce",
       },
     ],
   },
