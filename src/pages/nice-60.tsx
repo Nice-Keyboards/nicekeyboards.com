@@ -33,6 +33,12 @@ const stores = [
         country: "US",
         type: "woocommerce",
       },
+      {
+        name: "Typeractive.xyz",
+        url: "https://typeractive.xyz/products/nice-60",
+        country: "US",
+        type: "shopify",
+      },
     ],
   },
 ];
