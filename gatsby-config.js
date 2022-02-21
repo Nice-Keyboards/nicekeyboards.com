@@ -84,5 +84,6 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-remove-generator",
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-preact`,
   ],
 };
