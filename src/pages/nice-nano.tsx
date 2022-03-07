@@ -97,7 +97,7 @@ const stores = [
       },
       {
         name: "42. Keebs",
-        url: "https://42keebs.eu/shop/parts/controllers/nicenano-v2-wireless-controller/",
+        url: "https://42keebs.eu/shop/parts/controllers/nice-nano-v2-wireless-controller/",
         country: "CZ",
         type: "woocommerce",
       },
