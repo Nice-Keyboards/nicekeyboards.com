@@ -99,7 +99,12 @@ const stores = [
         name: "42. Keebs",
         url: "https://42keebs.eu/shop/parts/controllers/nice-nano-v2-wireless-controller/",
         country: "CZ",
-        type: "woocommerce",
+        type: "custom",
+        stock: {
+          tag: ".single_add_to_cart_button",
+          inStock: "Add to basket",
+          outOfStock: undefined,
+        }
       },
     ],
   },
