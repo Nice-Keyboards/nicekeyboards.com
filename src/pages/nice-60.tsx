@@ -264,7 +264,6 @@ const nice60 = () => {
                         "linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))",
                       WebkitMaskImage:
                         "linear-gradient(to right, rgba(0,0,0,1) 75%, rgba(0,0,0,0.2) 90%, transparent)",
-                      maxHeight: "50vh",
                     }}
                     loading="eager"
                     draggable={false}
