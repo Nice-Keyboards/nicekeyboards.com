@@ -109,7 +109,7 @@ const stores = [
       {
         name: "Qweebs",
         url: "https://qweebs.com/shop/microcontrollers/nicenano/",
-        country: "US",
+        country: "CZ",
         type: "woocommerce",
       },
     ],
