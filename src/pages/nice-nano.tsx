@@ -104,7 +104,13 @@ const stores = [
           tag: ".single_add_to_cart_button",
           inStock: "Add to basket",
           outOfStock: undefined,
-        }
+        },
+      },
+      {
+        name: "Qweebs",
+        url: "https://qweebs.com/shop/microcontrollers/nicenano/",
+        country: "US",
+        type: "woocommerce",
       },
     ],
   },
