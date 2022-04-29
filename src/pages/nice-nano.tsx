@@ -118,6 +118,12 @@ const stores = [
         country: "AU",
         type: "shopify",
       },
+      {
+        name: "KEEBD",
+        url: "https://keebd.com/products/nice-nano-v2",
+        country: "AU",
+        type: "shopify",
+      },
     ],
   },
   {
