@@ -88,11 +88,11 @@ const IndexPage = () => (
                 lineHeight="1.2"
               >
                 Free yourself of wires.
+                <br/>
                 <Box
                   as="span"
                   color={useColorModeValue("cyan.500", "cyan.300")}
                 >
-                  {" "}
                   nice!nano
                 </Box>
               </chakra.h1>
@@ -177,6 +177,7 @@ const IndexPage = () => (
                 >
                   *
                 </Box>
+                <br/>
                 <Box
                   as="span"
                   color={useColorModeValue("cyan.500", "cyan.300")}

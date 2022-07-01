@@ -17,6 +17,7 @@ import { Helmet } from "react-helmet";
 import theme from "../@chakra-ui/gatsby-plugin/theme";
 import FindAStore from "../components/find-a-store";
 import Layout from "../components/layout";
+import { ShopNow } from "../components/shop-now";
 
 const stores = [
   {
@@ -189,6 +190,11 @@ const niceNano = () => {
                 maxWidth="275px"
                 w="100%"
                 ml="1rem"
+                css={css`
+                  filter: drop-shadow(
+                    0px 10px 20px ${useColorModeValue(gray600, gray900)}
+                  );
+                `}
               >
                 <StaticImage
                   src="../images/nicenano-v2.png"
@@ -229,11 +235,12 @@ const niceNano = () => {
                   mx="auto"
                   opacity={0.7}
                   fontSize={{ base: "lg", lg: "xl" }}
-                  mt="6"
+                  my="6"
                 >
                   The nice!nano is a Pro Micro drop-in replacement board that
                   makes building wireless keyboards a breeze.
                 </Text>
+                <ShopNow />
               </Box>
             </Flex>
           </Container>
@@ -390,11 +397,11 @@ const niceNano = () => {
                   lineHeight="1.2"
                 >
                   Drag and Drop
+                  <br />
                   <Box
                     as="span"
                     color={useColorModeValue("cyan.500", "cyan.300")}
                   >
-                    {" "}
                     Programming
                   </Box>
                   .

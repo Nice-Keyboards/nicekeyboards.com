@@ -22,6 +22,7 @@ import theme from "../@chakra-ui/gatsby-plugin/theme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from '@fortawesome/pro-duotone-svg-icons';
 import FindAStore from "../components/find-a-store";
+import { ShopNow } from "../components/shop-now";
 
 const stores = [
   {
@@ -148,7 +149,7 @@ const nice60 = () => {
                   quality={80}
                 />
               </Box>
-              <Box textAlign="center" pt="2rem" zIndex="1">
+              <Box textAlign="left" pt="2rem" zIndex="1">
                 <chakra.h1
                   maxW="19ch"
                   mx="auto"
@@ -181,10 +182,11 @@ const nice60 = () => {
                   opacity={0.9}
                   fontSize={{ base: "lg", lg: "xl" }}
                   textAlign="left"
-                  mt="6"
+                  my="6"
                 >
                   Get months of battery life and charge back up in hours.
                 </Text>
+                <ShopNow />
               </Box>
             </Flex>
           </Container>
