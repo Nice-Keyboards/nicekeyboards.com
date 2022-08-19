@@ -79,6 +79,12 @@ const stores = [
         country: "US",
         type: "woocommerce",
       },
+      {
+        name: "PrismaKBD",
+        url: "https://prismakbd.com/product/nice-nano-v2/",
+        country: "US",
+        type: "woocommerce"
+      },
     ],
   },
   {
@@ -146,6 +152,12 @@ const stores = [
         url: "https://rectangles.store/products/nice-nano-v2-0",
         country: "IN",
         type: "shopify",
+      },
+      {
+        name: "beekeeb",
+        url: "https://shop.beekeeb.com/product/nicenano/",
+        country: "HK",
+        type: "woocommerce",
       },
       {
         name: "Next Keyboard Club",
