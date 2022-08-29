@@ -83,7 +83,13 @@ const stores = [
         name: "PrismaKBD",
         url: "https://prismakbd.com/product/nice-nano-v2/",
         country: "US",
-        type: "woocommerce"
+        type: "woocommerce",
+      },
+      {
+        name: "Flashquark",
+        url: "https://flashquark.com/product/nicenano-v2-0-wireless-pro-micro-replacement/",
+        country: "US",
+        type: "woocommerce",
       },
     ],
   },
