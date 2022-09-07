@@ -131,7 +131,6 @@ const niceView = () => {
               background-size: contain;
               background-repeat: no-repeat;
               position: absolute;
-              cursor: pointer;
               height: 60px;
               width: 80px;
               margin: 0px 0 0 -40px;
