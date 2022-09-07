@@ -12,7 +12,8 @@ import {
   InputGroup,
   Input,
   HStack,
-  VStack
+  VStack,
+  Tooltip
 } from "@chakra-ui/react"
 import { useViewportScroll } from "framer-motion"
 import { Link } from "gatsby";
@@ -74,6 +75,7 @@ function HeaderContent() {
         >
           <NavItem to="/nice-nano">nice!nano</NavItem>
           <NavItem to="/nice-60">nice!60</NavItem>
+          <NavItem to="/nice-view">nice!view</NavItem>
           <NavItem to="/docs">Documentation</NavItem>
           <NavItem to="/about">About</NavItem>
         </Flex>
@@ -84,15 +86,17 @@ function HeaderContent() {
             rel="noreferrer"
             target="_blank"
           >
-            <IconButton
-              size="md"
-              fontSize="lg"
-              aria-label={`Switch to ${text} mode`}
-              variant="ghost"
-              color="current"
-              mr={{ base: "1", md: "3" }}
-              icon={<FontAwesomeIcon icon={faDiscord} />}
-            />
+            <Tooltip label="Community Discord" openDelay={500}>
+              <IconButton
+                size="md"
+                fontSize="lg"
+                aria-label={`Switch to ${text} mode`}
+                variant="ghost"
+                color="current"
+                mr={{ base: "1", md: "3" }}
+                icon={<FontAwesomeIcon icon={faDiscord} />}
+              />
+            </Tooltip>
           </ChakraLink>
           <IconButton
             size="md"
@@ -145,6 +149,7 @@ function MobileNav() {
     >
       <NavItem to="/nice-nano">nice!nano</NavItem>
       <NavItem to="/nice-60">nice!60</NavItem>
+      <NavItem to="/nice-view">nice!view</NavItem>
       <NavItem to="/docs">Documentation</NavItem>
       <NavItem to="/about">About</NavItem>
     </VStack>
