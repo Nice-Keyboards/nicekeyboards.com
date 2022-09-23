@@ -1,0 +1,50 @@
+---
+title: Getting Started
+description: A quick guide on how to get started with your nice!60
+order: 1
+---
+
+# Getting Started
+
+## Installing your nice!view
+
+### Using an existing OLED compatible shield
+
+ - Cut off one of the positions of both the socket and header
+ - Solder the left over 4 pin socket to your shield
+ - Solder the left over 4 pin header to your nice!view's left 4 pins (not the CS pin!)
+ - Create a bodge wire from the CS pin to the D1 Pro Micro pin (P0.06/006 on the nice!nano)
+ - Insert the header into the socket
+
+### Using a nice!view native compatible shield
+
+ - Solder the 5 pin socket to your shield
+ - Solder the 5 pin header to the nice!view
+ - Insert the header into the socket
+
+## Using with ZMK
+
+After successfully installing your nice!view, all that should be required is to build your board with the `nice_view` shield
+
+### ZMK Config Repo
+
+With a ZMK config repo, edit the `build.yaml` file to have ` nice_view` added to the end of each shield string.
+
+```diff
+include:
+  - board: nice_nano_v2
+-   shield: lily58_left
++   shield: lily58_left nice_view
+  - board: nice_nano_v2
+-   shield: lily58_right
++   shield: lily58_right nice_view
+```
+
+### Manual ZMK build
+
+When building manually, all that needs to be done is adding ` nice_view` to the shield build string.
+
+```diff
+- west build -p -b nice_nano_v2 -- -DSHIELD="lily58_left"
++ west build -p -b nice_nano_v2 -- -DSHIELD="lily58_left nice_view"
+```
