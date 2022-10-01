@@ -22,8 +22,56 @@ import { ShopNow } from "../components/shop-now";
 
 const stores = [
   {
-    region: "Coming Soon",
+    region: "North America",
     stores: [
+      {
+        name: "Clickety Split",
+        url: "https://clicketysplit.ca/",
+        country: "CA",
+        type: "shopify",
+      },
+      {
+        name: "MKUltra Corp.",
+        url: "https://mkultra.click/nice-view/",
+        country: "US",
+        type: "klaviyo",
+        stock: {
+          link: "https://fast.a.klaviyo.com/api/v1/catalog/bigcommerce/product-variants?a=WfsDAk&p=408",
+        },
+      },
+      {
+        name: "Typeractive.xyz",
+        url: "https://typeractive.xyz/products/nice-view",
+        country: "US",
+        type: "shopify",
+      },
+    ],
+  },
+  {
+    region: "Europe",
+    stores: [
+      {
+        name: "42. Keebs",
+        url: "https://42keebs.eu/",
+        country: "CZ",
+        type: "custom",
+        stock: {
+          tag: ".single_add_to_cart_button",
+          inStock: "Add to basket",
+          outOfStock: undefined,
+        },
+      },
+    ],
+  },
+  {
+    region: "Asia",
+    stores: [
+      {
+        name: "beekeeb",
+        url: "https://shop.beekeeb.com/product/nice-view-with-sockets-power-saving-display-for-wireless-split-keyboard/",
+        country: "HK",
+        type: "woocommerce",
+      },
     ],
   },
 ];
