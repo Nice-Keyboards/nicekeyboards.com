@@ -84,7 +84,7 @@ export default function FindAStore({stores}: {stores: StoreRegion[]}) {
               await res.text(),
               "text/html"
             );
-            const stockText = doc.querySelector(s.stock.tag)?.textContent;
+            const stockText = doc.querySelector(s.stock.tag)?.textContent.trim();
             if (stockText === s.stock.inStock)  {
               stockCopy[s.url] = true;
             } else if (stockText === s.stock.outOfStock) {

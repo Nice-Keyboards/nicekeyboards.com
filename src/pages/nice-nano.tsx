@@ -119,12 +119,6 @@ const stores = [
           outOfStock: undefined,
         },
       },
-      {
-        name: "Qweebs",
-        url: "https://qweebs.com/shop/microcontrollers/nicenano/",
-        country: "CZ",
-        type: "woocommerce",
-      },
     ],
   },
   {
