@@ -26,7 +26,7 @@ const stores = [
     stores: [
       {
         name: "Clickety Split",
-        url: "https://clicketysplit.ca/",
+        url: "https://clicketysplit.ca/products/nice-view",
         country: "CA",
         type: "shopify",
       },
