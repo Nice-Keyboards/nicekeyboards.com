@@ -231,7 +231,7 @@ const niceView = () => {
               >
                 <StaticImage
                   src="../images/niceview-angle.png"
-                  alt="nice!nano"
+                  alt="nice!view"
                   width={600}
                   placeholder="none"
                   imgStyle={{ objectFit: "contain", maxHeight: "50vh" }}
@@ -326,7 +326,7 @@ const niceView = () => {
               >
                 <StaticImage
                   src="../images/niceview-slide.png"
-                  alt="nice!nano"
+                  alt="nice!view"
                   height={450}
                   placeholder="none"
                   imgStyle={{ objectFit: "contain", maxHeight: "50vh" }}
@@ -365,7 +365,7 @@ const niceView = () => {
               >
                 <StaticImage
                   src="../images/niceview-sockets.png"
-                  alt="nice!nano"
+                  alt="nice!view sockets"
                   height={400}
                   placeholder="none"
                   imgStyle={{ objectFit: "contain", maxHeight: "50vh" }}
