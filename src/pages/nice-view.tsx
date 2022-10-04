@@ -52,7 +52,7 @@ const stores = [
     stores: [
       {
         name: "42. Keebs",
-        url: "https://42keebs.eu/",
+        url: "https://42keebs.eu/shop/parts/niceview-power-efficient-lcd-display",
         country: "CZ",
         type: "custom",
         stock: {
