@@ -61,6 +61,23 @@ const stores = [
           outOfStock: undefined,
         },
       },
+      {
+        name: "Keycapsss",
+        url: "https://keycapsss.com/keyboard-parts/parts/219/nice-view-1.08-e-paper-display",
+        country: "DE",
+        type: "custom",
+        stock: {
+          tag: ".buy-btn--cart-add",
+          inStock: "Add to",
+          outOfStock: undefined,
+        },
+      },
+      {
+        name: "splitkb.com",
+        url: "https://splitkb.com",
+        country: "NL",
+        type: "shopify",
+      },
     ],
   },
   {
