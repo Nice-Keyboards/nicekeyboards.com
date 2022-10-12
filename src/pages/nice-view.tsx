@@ -74,7 +74,7 @@ const stores = [
       },
       {
         name: "splitkb.com",
-        url: "https://splitkb.com",
+        url: "https://splitkb.com/products/nice-view",
         country: "NL",
         type: "shopify",
       },
