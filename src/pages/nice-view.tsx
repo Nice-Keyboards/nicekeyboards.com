@@ -45,6 +45,12 @@ const stores = [
         country: "US",
         type: "shopify",
       },
+      {
+        name: "PrismaKBD",
+        url: "https://prismakbd.com/product/niceview/",
+        country: "US",
+        type: "woocommerce",
+      },
     ],
   },
   {
