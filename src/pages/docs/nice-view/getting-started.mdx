@@ -13,7 +13,7 @@ order: 1
  - Cut off one of the positions of both the socket and header
  - Solder the left over 4 pin socket to your shield
  - Solder the left over 4 pin header to your nice!view's left 4 pins (not the CS pin!)
- - Create a bodge wire from the CS pin to the D1 Pro Micro pin (P0.06/006 on the nice!nano)
+ - Create a bodge wire from the CS pin to the Arduino Digital 1 (D1) Pro Micro pin (P0.06/006 on the nice!nano)
    - If the D1 pin is unavailable, you'll need to override the `cs-gpios` on the adapter or define your own `&nice_view_spi` bus without the `nice_view_adapter`.
  - Insert the header into the socket
 
@@ -58,7 +58,7 @@ include:
 
 ### Manual ZMK build
 
-When building manually, all that needs to be done is adding ` nice_view` to the shield build string.
+When building manually, all that needs to be done is adding `nice_view` to the shield build string.
 If you're using an non-native but OLED compatible shield, you'll also need to add `nice_view_adapter` to the list of shields *first*.
 
 Native example:
