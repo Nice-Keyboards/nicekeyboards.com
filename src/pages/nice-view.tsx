@@ -97,6 +97,17 @@ const stores = [
       },
     ],
   },
+  {
+    region: "Australia",
+    stores: [
+      {
+        name: "KEEBD",
+        url: "https://keebd.com/products/nice-view",
+        country: "AU",
+        type: "shopify",
+      },
+    ],
+  },
 ];
 
 const gray900 = theme.colors.gray[900];
