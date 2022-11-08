@@ -51,6 +51,17 @@ const stores = [
         country: "US",
         type: "woocommerce",
       },
+      {
+        name: "Boardsource.xyz",
+        url: "https://boardsource.xyz/store/6355aa61b932b3573dae7f55",
+        country: "US",
+        type: "custom",
+        stock: {
+          tag: ".status__tag",
+          inStock: "In Stock",
+          outOfStock: "Just Ran Out",
+        },
+      },
     ],
   },
   {
