@@ -121,7 +121,7 @@ const stores = [
       },
       {
         name: "kriscables",
-        url: "https://kriscables.com/product/nicenano//",
+        url: "https://kriscables.com/product/nicenano/",
         country: "PT",
         type: "woocommerce",
       },
