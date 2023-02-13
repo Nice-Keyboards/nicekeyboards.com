@@ -119,6 +119,12 @@ const stores = [
           outOfStock: undefined,
         },
       },
+      {
+        name: "kriscables",
+        url: "https://kriscables.com/product/nicenano//",
+        country: "PT",
+        type: "woocommerce",
+      },
     ],
   },
   {
