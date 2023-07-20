@@ -110,7 +110,7 @@ const aboutPage = () => {
                     nick@nicekeyboards.com
                   </Link>
                 </strong>{" "}
-                or via Discord at <strong>Nicell#0001</strong>.
+                or via Discord to <strong>@nicell</strong>.
               </Text>
               <Text>
                 For support questions, reach out on the{" "}
