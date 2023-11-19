@@ -106,6 +106,12 @@ const stores = [
         country: "HK",
         type: "woocommerce",
       },
+      {
+        name: "Ergo Keyboards",
+        url: "https://ergokeyboard.sg/products/nice-view-oled-display",
+        country: "SG",
+        type: "shopify",
+      },
     ],
   },
   {

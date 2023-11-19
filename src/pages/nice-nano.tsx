@@ -171,6 +171,12 @@ const stores = [
         country: "PH",
         type: "woocommerce",
       },
+      {
+        name: "Ergo Keyboards",
+        url: "https://ergokeyboard.sg/products/nice-nano-v2-0",
+        country: "SG",
+        type: "shopify",
+      },
     ],
   },
 ];
