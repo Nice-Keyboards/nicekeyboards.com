@@ -31,15 +31,6 @@ const stores = [
         type: "shopify",
       },
       {
-        name: "MKUltra Corp.",
-        url: "https://mkultra.click/nice-view/",
-        country: "US",
-        type: "klaviyo",
-        stock: {
-          link: "https://fast.a.klaviyo.com/api/v1/catalog/bigcommerce/product-variants?a=WfsDAk&p=408",
-        },
-      },
-      {
         name: "Typeractive.xyz",
         url: "https://typeractive.xyz/products/nice-view",
         country: "US",
