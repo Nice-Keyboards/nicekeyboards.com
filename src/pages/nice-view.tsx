@@ -86,6 +86,12 @@ const stores = [
         country: "NL",
         type: "shopify",
       },
+      {
+        name: "Mechboards",
+        url: "https://mechboards.co.uk/collections/components/products/nice-view-display",
+        country: "GB",
+        type: "shopify",
+      },
     ],
   },
   {
