@@ -92,6 +92,12 @@ const stores = [
         country: "GB",
         type: "shopify",
       },
+      {
+        name: "kriscables",
+        url: "https://kriscables.com/product/nice-view/",
+        country: "PT",
+        type: "woocommerce",
+      },
     ],
   },
   {
