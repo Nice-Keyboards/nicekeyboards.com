@@ -111,7 +111,7 @@ const stores = [
       },
       {
         name: "Ergo Keyboards",
-        url: "https://ergokeyboard.sg/products/nice-view-oled-display",
+        url: "https://ergokeyboard.sg/products/nice-view-lcd-display",
         country: "SG",
         type: "shopify",
       },
