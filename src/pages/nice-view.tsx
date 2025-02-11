@@ -98,6 +98,15 @@ const stores = [
         country: "PT",
         type: "woocommerce",
       },
+      {
+        name: "KeebSupply",
+        url: "https://keeb.supply/products/niceview-display",
+        country: "DE",
+        type: "keebsupply",
+        stock: {
+          link: "https://keeb.supply/api/stock/niceview-display"
+        }
+      },
     ],
   },
   {
@@ -166,9 +175,9 @@ const niceView = () => {
             background-image: radial-gradient(
                 circle at center center,
                 ${useColorModeValue(
-                  theme.colors.white,
-                  theme.colors.gray[800]
-                )},
+            theme.colors.white,
+            theme.colors.gray[800]
+          )},
                 ${useColorModeValue(theme.colors.white, theme.colors.gray[800])}
               ),
               repeating-radial-gradient(
@@ -253,7 +262,7 @@ const niceView = () => {
             position="absolute"
             top="0"
             left="0"
-            visibility={{ base: 'hidden', lg: 'visible'}}
+            visibility={{ base: 'hidden', lg: 'visible' }}
             css={css`
               animation: ${disappear} 1s ease-in-out 1.5s forwards;
             `}
