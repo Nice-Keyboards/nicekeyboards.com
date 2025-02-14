@@ -4,6 +4,8 @@ import Flags from "country-flag-icons/react/3x2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faQuestionCircle, faTimesCircle } from "@fortawesome/pro-duotone-svg-icons";
 
+
+
 interface StoreRegion {
   region: string;
   stores: {
@@ -15,6 +17,7 @@ interface StoreRegion {
       tag: string;
       inStock: string;
       outOfStock: string;
+      link?: string;
     };
   }[];
 }
@@ -28,9 +31,9 @@ const shuffleArray = (arr: Array<any>): Array<any> => {
   return array;
 };
 
-export default function FindAStore({stores}: {stores: StoreRegion[]}) {
+export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
   const [storesState, setStoresState] = useState(stores);
-  const [stock, setStock] = useState({});
+  const [stock, setStock] = useState<{ [url: string]: boolean | undefined }>({});
   const [checkedStock, setCheckedStock] = useState(false);
   const container = useRef(null);
 
@@ -45,7 +48,7 @@ export default function FindAStore({stores}: {stores: StoreRegion[]}) {
   }, []);
 
   const checkStock = async () => {
-    let stockCopy = {...stock};
+    let stockCopy = { ...stock };
 
     await Promise.all(storesState.map(async (r) => await Promise.all(r.stores.map(async (s) => {
       try {
@@ -55,8 +58,11 @@ export default function FindAStore({stores}: {stores: StoreRegion[]}) {
             stockCopy[s.url] = json.available;
             break;
           case 'klaviyo':
-            const json2 = await (await fetch(s.stock.link)).json();
+            const json2 = await (await fetch(s.stock.link!)).json();
             stockCopy[s.url] = json2.data.variants[0].inventory_quantity > 0;
+            break;
+          case 'keebsupply':
+            stockCopy[s.url] = await fetch(s.stock.link!).then(resp => resp.json()).then(json => json.available).catch(() => undefined);
             break;
           case 'squarespace':
             if (!s.stock) {
@@ -85,7 +91,7 @@ export default function FindAStore({stores}: {stores: StoreRegion[]}) {
               "text/html"
             );
             const stockText = doc.querySelector(s.stock.tag)?.textContent.trim();
-            if (stockText === s.stock.inStock)  {
+            if (stockText === s.stock.inStock) {
               stockCopy[s.url] = true;
             } else if (stockText === s.stock.outOfStock) {
               stockCopy[s.url] = false;
@@ -94,14 +100,14 @@ export default function FindAStore({stores}: {stores: StoreRegion[]}) {
           default:
             stockCopy[s.url] = undefined;
         }
-        setStock({...stockCopy});
+        setStock({ ...stockCopy });
       } catch {
         stockCopy[s.url] = undefined;
       }
     }))));
 
-    setStock({...stockCopy});
-    
+    setStock({ ...stockCopy });
+
   }
 
   const stockIcon = (available: boolean) => {
