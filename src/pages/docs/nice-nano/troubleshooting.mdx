@@ -9,6 +9,7 @@ order: 3
 Troubleshooting your nice!nano often falls on to the firmware of choice, but a few directly hardware related items can be addressed.
 
 ## My nice!nano seems to be acting up and I want to re-flash the bootloader
+Before doing this, you should exhaust all other options, as attempting to flash the bootloader has the potential to brick your nice!nano if done incorrectly!
 
 ### I can still get into the existing bootloader over USB
 
@@ -35,6 +36,7 @@ After this runs, you should have your bootloader all re-flashed and fresh.
 If you can't get into the bootloader anymore, this will mean you'll need a device programmer. You can select one of the two below and use the steps listed.
 
 #### [J-Link (~$30)](https://www.amazon.com/Segger-J-Link-EDU-mini-Debugger/dp/B0758XRMTF)
+This is the preffered device as it allows access to write protected parts of the nRF MCU, that the cheaper options do not always allow.
 
 1. Plug in your nice!nano over USB
 2. Connect these 4 pins to the nice!nano (use the [pinout](/docs/nice-nano/pinout-schematic) as reference)

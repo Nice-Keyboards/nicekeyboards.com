@@ -14,7 +14,7 @@ Almost every Pro Micro based keyboard should work with the nice!nano. If you wan
 
 ### How is the nice!nano powered/how do the split boards power each other?
 
-They don't charge or power each other. Each side has an individual Li-Po battery connected to it via 2 extra pins at the top of the board (called B+ and B-).
+They are NOT at all designed to power each other, as each has an individual Li-Po battery connected to it via 2 extra pins at the top of the board (called B+ and B-). Using other means (TRRS) to share power is problematic and should be avoided (see below).
 
 ### How do you charge the nice!nano?
 
@@ -30,8 +30,8 @@ Yes!
 
 ### Do you still need a TRRS jack?
 
-No, there's a connection via BLE between the two boards. The central half reports back the keystrokes of both the central (usually left) and peripheral (usually right) sides.
-
+No, there's a connection via BLE between the two boards. The central half reports back the keystrokes of both the central (usually left) and peripheral (usually right) sides. Infact using a TRRS jack with the batteries still connected is strongly discouraged, as this (because of the inherent design of the TRRS) can cause a short ciruit 
+and damage the IO pins on the nice!nano.
 
 ### QMK firmware support?
 
