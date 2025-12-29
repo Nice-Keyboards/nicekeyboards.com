@@ -87,8 +87,8 @@ const stores = [
         country: "DE",
         type: "keebsupply",
         stock: {
-          link: "https://keeb.supply/api/stock/niceview-display"
-        }
+          link: "https://keeb.supply/api/stock/niceview-display",
+        },
       },
     ],
   },
@@ -97,9 +97,9 @@ const stores = [
     stores: [
       {
         name: "beekeeb",
-        url: "https://shop.beekeeb.com/product/nice-view-with-sockets-power-saving-display-for-wireless-split-keyboard/",
+        url: "https://shop.beekeeb.com/products/nice-view-with-sockets-power-saving-display-for-wireless-split-keyboard/",
         country: "HK",
-        type: "woocommerce",
+        type: "shopify",
       },
       {
         name: "Ergo Keyboards",

@@ -105,9 +105,9 @@ const stores = [
     stores: [
       {
         name: "beekeeb",
-        url: "https://shop.beekeeb.com/product/nicenano/",
+        url: "https://shop.beekeeb.com/products/nicenano",
         country: "HK",
-        type: "woocommerce",
+        type: "shopify",
       },
       {
         name: "Next Keyboard Club",
