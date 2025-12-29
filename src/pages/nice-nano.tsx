@@ -25,32 +25,9 @@ const stores = [
     stores: [
       {
         name: "Boardsource.xyz",
-        url: "https://boardsource.xyz/store/5f4a1733bbaa5c635b83ed67",
+        url: "https://boardsource.xyz/products/nice-nano-v2-wireless-keyboard-controller",
         country: "US",
-        type: "custom",
-        stock: {
-          tag: ".status__tag",
-          inStock: "In Stock",
-          outOfStock: "Just Ran Out",
-        },
-      },
-      {
-        name: "Clawsome Boards",
-        url: "https://www.clawboards.xyz/shop/p/nicenano",
-        country: "US",
-        type: "squarespace",
-      },
-      {
-        name: "Clickety Split",
-        url: "https://clicketysplit.ca/products/nice-nano-v2",
-        country: "CA",
         type: "shopify",
-      },
-      {
-        name: "KeyHive",
-        url: "https://keyhive.xyz/shop/nicenano",
-        country: "US",
-        type: "squarespace",
       },
       {
         name: "Little Keyboards",
@@ -63,18 +40,6 @@ const stores = [
         url: "https://typeractive.xyz/products/nice-nano",
         country: "US",
         type: "shopify",
-      },
-      {
-        name: "1upkeyboards",
-        url: "https://1upkeyboards.com/shop/controllers/nicenano-ble-controller/",
-        country: "US",
-        type: "woocommerce",
-      },
-      {
-        name: "PrismaKBD",
-        url: "https://prismakbd.com/product/nice-nano-v2/",
-        country: "US",
-        type: "woocommerce",
       },
       {
         name: "Flashquark",
@@ -122,18 +87,6 @@ const stores = [
     region: "Australia",
     stores: [
       {
-        name: "Daily Clack",
-        url: "https://dailyclack.com/products/nice-nano-v2-0",
-        country: "AU",
-        type: "shopify",
-      },
-      {
-        name: "Custom KBD",
-        url: "https://customkbd.com/collections/other-components/products/nice-nano",
-        country: "AU",
-        type: "shopify",
-      },
-      {
         name: "KEEBD",
         url: "https://keebd.com/products/nice-nano",
         country: "AU",
@@ -145,12 +98,6 @@ const stores = [
     region: "Asia",
     stores: [
       {
-        name: "Rectangles.Store",
-        url: "https://rectangles.store/products/nice-nano-v2-0",
-        country: "IN",
-        type: "shopify",
-      },
-      {
         name: "beekeeb",
         url: "https://shop.beekeeb.com/product/nicenano/",
         country: "HK",
@@ -158,7 +105,7 @@ const stores = [
       },
       {
         name: "Next Keyboard Club",
-        url: "https://nextkeyboard.club/product/nicenano/",
+        url: "https://posture.works/product/nicenano/",
         country: "PH",
         type: "woocommerce",
       },
