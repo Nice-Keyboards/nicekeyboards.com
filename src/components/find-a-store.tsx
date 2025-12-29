@@ -80,6 +80,14 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
                 outOfStock: undefined,
               };
             }
+          case 'wix':
+            if (!s.stock) {
+              s.stock = {
+                tag: "[data-hook='add-to-cart']",
+                inStock: "Add to Cart",
+                outOfStock: "Out of Stock",
+              };
+            }
           case 'custom':
             const res = await fetch("https://cors.nicell.workers.dev/?" + s.url);
             if (res.status >= 400) {

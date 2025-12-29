@@ -30,6 +30,12 @@ const stores = [
         country: "US",
         type: "shopify",
       },
+      {
+        name: "Contura Keyboards",
+        url: "https://www.conturakeyboards.com/product-page/nice-view",
+        country: "US",
+        type: "wix",
+      },
     ],
   },
   {

@@ -47,6 +47,12 @@ const stores = [
         country: "US",
         type: "woocommerce",
       },
+      {
+        name: "Contura Keyboards",
+        url: "https://www.conturakeyboards.com/product-page/nice-nano-v2",
+        country: "US",
+        type: "wix",
+      },
     ],
   },
   {
