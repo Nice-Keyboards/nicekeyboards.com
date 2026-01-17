@@ -209,6 +209,21 @@ const niceNano = () => {
                   The nice!nano is a Pro Micro drop-in replacement board that
                   makes building wireless keyboards a breeze.
                 </Text>
+                <Text
+                  fontSize={{ base: "sm", md: "md" }}
+                  opacity={0.8}
+                  mt="2"
+                  mb="4"
+                >
+                  <Link
+                    href="https://nick.winans.io/blog/nice-nano/"
+                    isExternal
+                    color={useColorModeValue("cyan.600", "cyan.300")}
+                    fontWeight="600"
+                  >
+                    Read the nice!nano origin story
+                  </Link>
+                </Text>
                 <ShopNow />
               </Box>
             </Flex>
@@ -415,66 +430,16 @@ const niceNano = () => {
             </Flex>
           </Container>
         </Box>
-        <Box as="section" py="0.01rem">
-          <Container maxW="1280px" my="2rem">
-            <Box
-              borderWidth="1px"
-              borderColor={useColorModeValue("gray.200", "gray.600")}
-              borderRadius="lg"
-              background={useColorModeValue("white", "gray.800")}
-              p={{ base: "1.5rem", md: "2rem" }}
-            >
-              <Flex
-                justify="space-between"
-                alignItems={{ base: "flex-start", md: "center" }}
-                wrap="wrap"
-                gap="1.5rem"
-              >
-                <Box maxW="640px">
-                  <chakra.h2
-                    fontSize={{ base: "1.5rem", md: "1.75rem" }}
-                    fontFamily="heading"
-                    fontWeight="bold"
-                    mb="0.5rem"
-                  >
-                    The nice!nano story
-                  </chakra.h2>
-                  <Text opacity={0.8} fontSize={{ base: "md", md: "lg" }}>
-                    Nice Keyboards and Typeractive are run by the same team.
-                    Typeractive grew out of the nice!nano project, and the
-                    full story is here.
-                  </Text>
-                  <Text mt="0.5rem" opacity={0.7} fontSize="sm">
-                    Prefer a partner vendor? The list below has worldwide
-                    options.
-                  </Text>
-                </Box>
-                <Flex gap="1rem" wrap="wrap">
-                  <Link
-                    href="https://nick.winans.io/blog/nice-nano/"
-                    isExternal
-                    fontWeight="600"
-                    color={useColorModeValue("cyan.600", "cyan.300")}
-                  >
-                    Read the story
-                  </Link>
-                  <Link
-                    href="https://typeractive.xyz"
-                    isExternal
-                    fontWeight="600"
-                    color={useColorModeValue("cyan.600", "cyan.300")}
-                  >
-                    Visit Typeractive
-                  </Link>
-                </Flex>
-              </Flex>
-            </Box>
-          </Container>
-        </Box>
         <Box as="section">
           <Container maxW="1280px" my="2rem">
             <Flex justify="space-evenly" alignItems="center" wrap="wrap">
-              <FindAStore stores={stores} />
+              <Box>
+                <FindAStore stores={stores} />
+                <Text mt="1rem" fontSize="sm" opacity={0.7} textAlign="center">
+                  Typeractive is run by the Nice Keyboards team behind the
+                  nice!nano.
+                </Text>
+              </Box>
               <Box textAlign="center" pt="3rem">
                 <chakra.h1
                   maxW="20ch"
