@@ -1,4 +1,13 @@
-import { Box, chakra, Flex, Heading, Link, Tooltip, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  chakra,
+  Flex,
+  Heading,
+  Link,
+  Tooltip,
+  useColorModeValue,
+  useToken,
+} from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import Flags from "country-flag-icons/react/3x2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -45,7 +54,11 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
   const [stock, setStock] = useState<{ [url: string]: boolean | undefined }>({});
   const [checkedStock, setCheckedStock] = useState(false);
   const container = useRef(null);
-  const officialColor = useColorModeValue("cyan.600", "cyan.300");
+  const [officialLight, officialDark] = useToken("colors", [
+    "cyan.600",
+    "cyan.300",
+  ]);
+  const officialColor = useColorModeValue(officialLight, officialDark);
   const officialIconStyle = {
     "--fa-primary-color": officialColor,
     "--fa-secondary-color": officialColor,
