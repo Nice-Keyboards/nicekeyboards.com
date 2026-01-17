@@ -42,7 +42,12 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
   const [stock, setStock] = useState<{ [url: string]: boolean | undefined }>({});
   const [checkedStock, setCheckedStock] = useState(false);
   const container = useRef(null);
-  const officialColor = useColorModeValue("cyan.600", "cyan.400");
+  const officialColor = useColorModeValue("cyan.600", "cyan.300");
+  const officialIconStyle = {
+    "--fa-primary-color": officialColor,
+    "--fa-secondary-color": officialColor,
+    "--fa-secondary-opacity": 0.4,
+  } as React.CSSProperties;
 
   useEffect(() => {
     let regions = [...storesState];
@@ -241,7 +246,7 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
                   {isOfficial ? (
                     <Tooltip label="Official Nice Keyboards store" openDelay={300}>
                       <Box pl="0.35rem">
-                        <FontAwesomeIcon color={officialColor} icon={faBadgeCheck} />
+                        <FontAwesomeIcon icon={faBadgeCheck} style={officialIconStyle} />
                       </Box>
                     </Tooltip>
                   ) : null}
