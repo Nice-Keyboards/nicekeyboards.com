@@ -2,7 +2,12 @@ import { Box, chakra, Flex, Heading, Link, Tooltip, useColorModeValue } from "@c
 import React, { useEffect, useRef, useState } from "react";
 import Flags from "country-flag-icons/react/3x2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faQuestionCircle, faTimesCircle } from "@fortawesome/pro-duotone-svg-icons";
+import {
+  faBadgeCheck,
+  faCheckCircle,
+  faQuestionCircle,
+  faTimesCircle,
+} from "@fortawesome/pro-duotone-svg-icons";
 
 
 
@@ -37,6 +42,7 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
   const [stock, setStock] = useState<{ [url: string]: boolean | undefined }>({});
   const [checkedStock, setCheckedStock] = useState(false);
   const container = useRef(null);
+  const officialColor = useColorModeValue("cyan.500", "cyan.300");
 
   useEffect(() => {
     let regions = [...storesState];
@@ -233,20 +239,11 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
                   <Flag width="2rem" style={{ marginRight: "0.25rem" }} />
                   {store.name}
                   {isOfficial ? (
-                    <chakra.span
-                      ml="0.5rem"
-                      px="0.4rem"
-                      py="0.1rem"
-                      fontSize="0.65rem"
-                      fontWeight="600"
-                      letterSpacing="0.02em"
-                      borderRadius="sm"
-                      borderWidth="1px"
-                      borderColor={useColorModeValue("cyan.500", "cyan.300")}
-                      color={useColorModeValue("cyan.700", "cyan.200")}
-                    >
-                      Official Nice Keyboards Store
-                    </chakra.span>
+                    <Tooltip label="Official Nice Keyboards store" openDelay={300}>
+                      <Box pl="0.35rem">
+                        <FontAwesomeIcon color={officialColor} icon={faBadgeCheck} />
+                      </Box>
+                    </Tooltip>
                   ) : null}
                   {stockIcon(stock[store.url])}
                 </Link>
