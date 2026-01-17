@@ -37,6 +37,9 @@ const shuffleArray = (arr: Array<any>): Array<any> => {
   return array;
 };
 
+const isOfficialStore = (store: StoreRegion["stores"][number]) =>
+  Boolean(store.official || store.url.includes("typeractive.xyz"));
+
 export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
   const [storesState, setStoresState] = useState(stores);
   const [stock, setStock] = useState<{ [url: string]: boolean | undefined }>({});
@@ -53,7 +56,10 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
     let regions = [...storesState];
 
     regions.forEach(r => {
-      r.stores = shuffleArray(r.stores);
+      const shuffled = shuffleArray(r.stores);
+      const official = shuffled.filter(isOfficialStore);
+      const other = shuffled.filter((store) => !isOfficialStore(store));
+      r.stores = [...official, ...other];
     });
 
     setStoresState(regions);
@@ -225,8 +231,7 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
           <Flex justify="center" alignItems="center" wrap="wrap" maxW="500px">
             {region.stores.map((store) => {
               const Flag = Flags[store.country];
-              const isOfficial =
-                store.official || store.url.includes("typeractive.xyz");
+              const isOfficial = isOfficialStore(store);
               return (
                 <Link
                   target="_blank"
