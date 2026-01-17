@@ -42,7 +42,7 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
   const [stock, setStock] = useState<{ [url: string]: boolean | undefined }>({});
   const [checkedStock, setCheckedStock] = useState(false);
   const container = useRef(null);
-  const officialColor = useColorModeValue("cyan.500", "cyan.300");
+  const officialColor = useColorModeValue("cyan.600", "cyan.400");
 
   useEffect(() => {
     let regions = [...storesState];
