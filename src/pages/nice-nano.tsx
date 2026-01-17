@@ -4,6 +4,7 @@ import {
   Container,
   Flex,
   chakra,
+  Link,
   Text,
   Table,
   Tbody,
@@ -412,6 +413,62 @@ const niceNano = () => {
                 />
               </Box>
             </Flex>
+          </Container>
+        </Box>
+        <Box as="section" py="0.01rem">
+          <Container maxW="1280px" my="2rem">
+            <Box
+              borderWidth="1px"
+              borderColor={useColorModeValue("gray.200", "gray.600")}
+              borderRadius="lg"
+              background={useColorModeValue("white", "gray.800")}
+              p={{ base: "1.5rem", md: "2rem" }}
+            >
+              <Flex
+                justify="space-between"
+                alignItems={{ base: "flex-start", md: "center" }}
+                wrap="wrap"
+                gap="1.5rem"
+              >
+                <Box maxW="640px">
+                  <chakra.h2
+                    fontSize={{ base: "1.5rem", md: "1.75rem" }}
+                    fontFamily="heading"
+                    fontWeight="bold"
+                    mb="0.5rem"
+                  >
+                    The nice!nano story
+                  </chakra.h2>
+                  <Text opacity={0.8} fontSize={{ base: "md", md: "lg" }}>
+                    Nice Keyboards and Typeractive are run by the same team.
+                    Typeractive grew out of the nice!nano project, and the
+                    full story is here.
+                  </Text>
+                  <Text mt="0.5rem" opacity={0.7} fontSize="sm">
+                    Prefer a partner vendor? The list below has worldwide
+                    options.
+                  </Text>
+                </Box>
+                <Flex gap="1rem" wrap="wrap">
+                  <Link
+                    href="https://nick.winans.io/blog/nice-nano/"
+                    isExternal
+                    fontWeight="600"
+                    color={useColorModeValue("cyan.600", "cyan.300")}
+                  >
+                    Read the story
+                  </Link>
+                  <Link
+                    href="https://typeractive.xyz"
+                    isExternal
+                    fontWeight="600"
+                    color={useColorModeValue("cyan.600", "cyan.300")}
+                  >
+                    Visit Typeractive
+                  </Link>
+                </Flex>
+              </Flex>
+            </Box>
           </Container>
         </Box>
         <Box as="section">
