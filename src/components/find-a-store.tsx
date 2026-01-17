@@ -19,6 +19,7 @@ interface StoreRegion {
       outOfStock: string;
       link?: string;
     };
+    official?: boolean;
   }[];
 }
 
@@ -213,6 +214,8 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
           <Flex justify="center" alignItems="center" wrap="wrap" maxW="500px">
             {region.stores.map((store) => {
               const Flag = Flags[store.country];
+              const isOfficial =
+                store.official || store.url.includes("typeractive.xyz");
               return (
                 <Link
                   target="_blank"
@@ -229,6 +232,22 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
                 >
                   <Flag width="2rem" style={{ marginRight: "0.25rem" }} />
                   {store.name}
+                  {isOfficial ? (
+                    <chakra.span
+                      ml="0.5rem"
+                      px="0.4rem"
+                      py="0.1rem"
+                      fontSize="0.65rem"
+                      fontWeight="600"
+                      letterSpacing="0.02em"
+                      borderRadius="sm"
+                      borderWidth="1px"
+                      borderColor={useColorModeValue("cyan.500", "cyan.300")}
+                      color={useColorModeValue("cyan.700", "cyan.200")}
+                    >
+                      Official Nice Keyboards Store
+                    </chakra.span>
+                  ) : null}
                   {stockIcon(stock[store.url])}
                 </Link>
               );

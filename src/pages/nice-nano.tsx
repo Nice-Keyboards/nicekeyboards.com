@@ -433,13 +433,7 @@ const niceNano = () => {
         <Box as="section">
           <Container maxW="1280px" my="2rem">
             <Flex justify="space-evenly" alignItems="center" wrap="wrap">
-              <Box>
-                <FindAStore stores={stores} />
-                <Text mt="1rem" fontSize="sm" opacity={0.7} textAlign="center">
-                  Typeractive is run by the Nice Keyboards team behind the
-                  nice!nano.
-                </Text>
-              </Box>
+              <FindAStore stores={stores} />
               <Box textAlign="center" pt="3rem">
                 <chakra.h1
                   maxW="20ch"
