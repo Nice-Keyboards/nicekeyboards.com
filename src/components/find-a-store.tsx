@@ -1,8 +1,22 @@
-import { Box, chakra, Flex, Heading, Link, Tooltip, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  chakra,
+  Flex,
+  Heading,
+  Link,
+  Tooltip,
+  useColorModeValue,
+  useToken,
+} from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import Flags from "country-flag-icons/react/3x2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faQuestionCircle, faTimesCircle } from "@fortawesome/pro-duotone-svg-icons";
+import {
+  faBadgeCheck,
+  faCheckCircle,
+  faQuestionCircle,
+  faTimesCircle,
+} from "@fortawesome/pro-duotone-svg-icons";
 
 
 
@@ -19,6 +33,7 @@ interface StoreRegion {
       outOfStock: string;
       link?: string;
     };
+    official?: boolean;
   }[];
 }
 
@@ -31,17 +46,33 @@ const shuffleArray = (arr: Array<any>): Array<any> => {
   return array;
 };
 
+const isOfficialStore = (store: StoreRegion["stores"][number]) =>
+  Boolean(store.official || store.url.includes("typeractive.xyz"));
+
 export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
   const [storesState, setStoresState] = useState(stores);
   const [stock, setStock] = useState<{ [url: string]: boolean | undefined }>({});
   const [checkedStock, setCheckedStock] = useState(false);
   const container = useRef(null);
+  const [officialLight, officialDark] = useToken("colors", [
+    "cyan.600",
+    "cyan.300",
+  ]);
+  const officialColor = useColorModeValue(officialLight, officialDark);
+  const officialIconStyle = {
+    "--fa-primary-color": officialColor,
+    "--fa-secondary-color": officialColor,
+    "--fa-secondary-opacity": 0.4,
+  } as React.CSSProperties;
 
   useEffect(() => {
     let regions = [...storesState];
 
     regions.forEach(r => {
-      r.stores = shuffleArray(r.stores);
+      const shuffled = shuffleArray(r.stores);
+      const official = shuffled.filter(isOfficialStore);
+      const other = shuffled.filter((store) => !isOfficialStore(store));
+      r.stores = [...official, ...other];
     });
 
     setStoresState(regions);
@@ -213,6 +244,7 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
           <Flex justify="center" alignItems="center" wrap="wrap" maxW="500px">
             {region.stores.map((store) => {
               const Flag = Flags[store.country];
+              const isOfficial = isOfficialStore(store);
               return (
                 <Link
                   target="_blank"
@@ -229,6 +261,13 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
                 >
                   <Flag width="2rem" style={{ marginRight: "0.25rem" }} />
                   {store.name}
+                  {isOfficial ? (
+                    <Tooltip label="Official Nice Keyboards store" openDelay={300}>
+                      <Box pl="0.35rem">
+                        <FontAwesomeIcon icon={faBadgeCheck} style={officialIconStyle} />
+                      </Box>
+                    </Tooltip>
+                  ) : null}
                   {stockIcon(stock[store.url])}
                 </Link>
               );

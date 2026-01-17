@@ -4,6 +4,7 @@ import {
   Container,
   Flex,
   chakra,
+  Link,
   Text,
   Table,
   Tbody,
@@ -207,6 +208,20 @@ const niceNano = () => {
                 >
                   The nice!nano is a Pro Micro drop-in replacement board that
                   makes building wireless keyboards a breeze.
+                </Text>
+                <Text
+                  fontSize={{ base: "sm", md: "md" }}
+                  opacity={0.8}
+                  mb="4"
+                >
+                  <Link
+                    href="https://nick.winans.io/blog/nice-nano/"
+                    isExternal
+                    color={useColorModeValue("cyan.600", "cyan.300")}
+                    fontWeight="600"
+                  >
+                    Read the nice!nano origin story
+                  </Link>
                 </Text>
                 <ShopNow />
               </Box>
