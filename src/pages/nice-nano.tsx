@@ -212,7 +212,6 @@ const niceNano = () => {
                 <Text
                   fontSize={{ base: "sm", md: "md" }}
                   opacity={0.8}
-                  mt="2"
                   mb="4"
                 >
                   <Link
