@@ -217,6 +217,7 @@ const niceNano = () => {
                   <Link
                     href="https://nick.winans.io/blog/nice-nano/"
                     isExternal
+                    rel="noopener"
                     color={useColorModeValue("cyan.600", "cyan.300")}
                     fontWeight="600"
                   >
