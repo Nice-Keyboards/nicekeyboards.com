@@ -49,6 +49,20 @@ const shuffleArray = (arr: Array<any>): Array<any> => {
 const isOfficialStore = (store: StoreRegion["stores"][number]) =>
   Boolean(store.official || store.url.includes("typeractive.xyz"));
 
+const addAttributionParams = (url: string): string => {
+  try {
+    const urlObj = new URL(url);
+    urlObj.searchParams.set("utm_source", "nicekeyboards");
+    urlObj.searchParams.set("utm_medium", "referral");
+    urlObj.searchParams.set("utm_campaign", "find-a-store");
+    return urlObj.toString();
+  } catch {
+    // If URL parsing fails, append params manually
+    const separator = url.includes("?") ? "&" : "?";
+    return `${url}${separator}utm_source=nicekeyboards&utm_medium=referral&utm_campaign=find-a-store`;
+  }
+};
+
 export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
   const [storesState, setStoresState] = useState(stores);
   const [stock, setStock] = useState<{ [url: string]: boolean | undefined }>({});
@@ -248,7 +262,7 @@ export default function FindAStore({ stores }: { stores: StoreRegion[] }) {
               return (
                 <Link
                   target="_blank"
-                  href={store.url}
+                  href={addAttributionParams(store.url)}
                   rel="noopener"
                   py="0.5rem"
                   px="1rem"
